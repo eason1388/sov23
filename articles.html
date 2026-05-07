@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>命理文章 | 隨緣堂</title>
+<meta name="description" content="紫微斗數、八字命理、流年運勢——隨緣堂的命理隨筆與生活思辨。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">緣</div>
+      <div>
+        <div class="brand-name">隨緣堂</div>
+        <div class="brand-sub">SUI YUAN TANG</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="services.html">服務項目</a></li>
+      <li><a href="about.html">關於老師</a></li>
+      <li><a href="articles.html" class="active">命理文章</a></li>
+      <li><a href="booking.html">預約諮詢</a></li>
+      <li><a href="contact.html">聯絡我們</a></li>
+    </ul>
+    <a href="booking.html" class="nav-cta">立即預約</a>
+    <button class="menu-toggle" onclick="document.getElementById('drawer').classList.add('open')">☰</button>
+  </nav>
+</header>
+
+<div class="mobile-drawer" id="drawer">
+  <button class="close" onclick="document.getElementById('drawer').classList.remove('open')">×</button>
+  <a href="index.html">首頁</a>
+  <a href="services.html">服務項目</a>
+  <a href="about.html">關於老師</a>
+  <a href="articles.html">命理文章</a>
+  <a href="booking.html">預約諮詢</a>
+  <a href="contact.html">聯絡我們</a>
+</div>
+
+<section class="page-header">
+  <h1>命理文章</h1>
+  <div class="breadcrumb"><a href="index.html">首頁</a><span class="sep">／</span>命理文章</div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="articles-filter">
+      <div class="filter-pill active" onclick="filterArticles(this,'all')">全部文章</div>
+      <div class="filter-pill" onclick="filterArticles(this,'ziwei')">紫微斗數</div>
+      <div class="filter-pill" onclick="filterArticles(this,'bazi')">八字命理</div>
+      <div class="filter-pill" onclick="filterArticles(this,'yearly')">流年運勢</div>
+      <div class="filter-pill" onclick="filterArticles(this,'love')">情感命理</div>
+      <div class="filter-pill" onclick="filterArticles(this,'life')">命理生活</div>
+    </div>
+
+    <div class="article-grid" id="articleGrid">
+      <article class="article-card" data-cat="ziwei">
+        <div class="article-cover">紫</div>
+        <div class="article-body">
+          <span class="article-tag">紫微斗數</span>
+          <h3>命宮的星辰,決定一生的底色?</h3>
+          <p>命宮主星往往被視為性格基調,但真正影響一生走向的,還包括三方四正的星辰互動。本文從基礎出發,帶您理解命宮的真實意義。</p>
+          <div class="article-meta">2026.04.18 ‧ 5 分鐘閱讀</div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="yearly">
+        <div class="article-cover">運</div>
+        <div class="article-body">
+          <span class="article-tag">流年運勢</span>
+          <h3>2026 丙午年:火氣旺盛之年的進退取捨</h3>
+          <p>丙午為陽火坐火,整體年運偏向積極外擴,但容易躁進。本文整理十二生肖在此年的留意之處與機會點。</p>
+          <div class="article-meta">2026.03.05 ‧ 8 分鐘閱讀</div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="love">
+        <div class="article-cover">緣</div>
+        <div class="article-body">
+          <span class="article-tag">情感命理</span>
+          <h3>夫妻宮的化忌,真的代表婚姻不順嗎?</h3>
+          <p>許多人看到夫妻宮有化忌就心驚,其實化忌也代表「在意」與「投入」。理解它的雙面性,才是命理的智慧。</p>
+          <div class="article-meta">2026.02.14 ‧ 6 分鐘閱讀</div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="bazi">
+        <div class="article-cover">八</div>
+        <div class="article-body">
+          <span class="article-tag">八字命理</span>
+          <h3>日主強弱怎麼看?五分鐘理解八字基本盤</h3>
+          <p>日主代表「自己」,日主的強弱決定您命局中的喜忌方向。本文以最簡單的方式拆解日主強弱判斷的核心原則。</p>
+          <div class="article-meta">2026.01.22 ‧ 7 分鐘閱讀</div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="ziwei">
+        <div class="article-cover">財</div>
+        <div class="article-body">
+          <span class="article-tag">紫微斗數</span>
+          <h3>財帛宮空宮,代表沒錢嗎?</h3>
+          <p>命盤上看到財帛宮「空宮」常讓人緊張,其實空宮自有其妙用。理解空宮借星的邏輯,才能真正解讀財運走勢。</p>
+          <div class="article-meta">2025.12.30 ‧ 5 分鐘閱讀</div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="life">
+        <div class="article-cover">心</div>
+        <div class="article-body">
+          <span class="article-tag">命理生活</span>
+          <h3>當命理遇到心理學:看清自己,才是改變的起點</h3>
+          <p>命理不只是預測未來的工具,更是一面照見自己的鏡子。當我們願意誠實面對盤面,改變才有可能發生。</p>
+          <div class="article-meta">2025.12.10 ‧ 6 分鐘閱讀</div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="bazi">
+        <div class="article-cover">用</div>
+        <div class="article-body">
+          <span class="article-tag">八字命理</span>
+          <h3>什麼是「用神」?它真的能改變命運嗎?</h3>
+          <p>用神是八字命理中最關鍵的概念之一。本文從基礎到實務,帶您理解用神如何運作,以及它對日常選擇的影響。</p>
+          <div class="article-meta">2025.11.18 ‧ 9 分鐘閱讀</div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="love">
+        <div class="article-cover">合</div>
+        <div class="article-body">
+          <span class="article-tag">情感命理</span>
+          <h3>合婚迷思:八字「合」就一定幸福嗎?</h3>
+          <p>八字相合不等於白頭偕老,八字看起來不合也未必走不遠。婚姻的長度,從來不只看一張紙面上的格局。</p>
+          <div class="article-meta">2025.10.28 ‧ 7 分鐘閱讀</div>
+        </div>
+      </article>
+
+      <article class="article-card" data-cat="yearly">
+        <div class="article-cover">節</div>
+        <div class="article-body">
+          <span class="article-tag">流年運勢</span>
+          <h3>立春才是新的一年開始?談八字流年的真正起點</h3>
+          <p>許多人以為農曆春節就是新一年的命理起點,其實八字流年是以「立春」為界。理解這個細節,才不會推錯運勢。</p>
+          <div class="article-meta">2025.10.05 ‧ 5 分鐘閱讀</div>
+        </div>
+      </article>
+    </div>
+
+    <!-- Pagination dummy -->
+    <div style="display:flex;justify-content:center;gap:8px;margin-top:64px">
+      <a href="#" class="filter-pill active" style="border-radius:2px">1</a>
+      <a href="#" class="filter-pill" style="border-radius:2px">2</a>
+      <a href="#" class="filter-pill" style="border-radius:2px">3</a>
+      <a href="#" class="filter-pill" style="border-radius:2px">下一頁 →</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>讀文不如親盤一見</h2>
+  <p>真正屬於您的命理答案,藏在您自己的命盤裡。</p>
+  <a href="booking.html" class="btn-primary">預約專屬命盤諮詢</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <div class="brand-mark">緣</div>
+        <div>
+          <div class="brand-name">隨緣堂</div>
+          <div class="brand-sub" style="color:#9b9684">SUI YUAN TANG</div>
+        </div>
+      </div>
+      <p class="footer-desc">以紫微斗數與八字命理為徑,陪伴每一位來訪者梳理命運的脈絡。</p>
+    </div>
+    <div>
+      <h4>服務項目</h4>
+      <ul>
+        <li><a href="services.html#ziwei">紫微斗數</a></li>
+        <li><a href="services.html#bazi">八字論命</a></li>
+        <li><a href="services.html#pair">合婚擇日</a></li>
+        <li><a href="services.html#yearly">流年運勢</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>關於我們</h4>
+      <ul>
+        <li><a href="about.html">老師簡介</a></li>
+        <li><a href="articles.html">命理文章</a></li>
+        <li><a href="contact.html">聯絡資訊</a></li>
+        <li><a href="booking.html">預約諮詢</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>聯絡方式</h4>
+      <ul>
+        <li>地址:台北市大安區安和路二段</li>
+        <li>電話:02-2700-0000</li>
+        <li>LINE:@suiyuantang</li>
+        <li>信箱:hello@suiyuantang.tw</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 隨緣堂 SUI YUAN TANG. All rights reserved.</div>
+    <div>命理為參考之用,人生選擇仍在自己手中。</div>
+  </div>
+</footer>
+
+<script>
+function filterArticles(el,cat){
+  document.querySelectorAll('.filter-pill').forEach(p=>p.classList.remove('active'));
+  el.classList.add('active');
+  document.querySelectorAll('#articleGrid .article-card').forEach(c=>{
+    if(cat==='all' || c.dataset.cat===cat){c.style.display='';}else{c.style.display='none';}
+  });
+}
+</script>
+
+</body>
+</html>

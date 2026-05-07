@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1.0" />
+<title>聯絡我們 | 隨緣堂</title>
+<meta name="description" content="隨緣堂位於台北市大安區,提供紫微斗數、八字命理諮詢服務。" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="site-header">
+  <nav class="nav">
+    <a href="index.html" class="brand">
+      <div class="brand-mark">緣</div>
+      <div>
+        <div class="brand-name">隨緣堂</div>
+        <div class="brand-sub">SUI YUAN TANG</div>
+      </div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">首頁</a></li>
+      <li><a href="services.html">服務項目</a></li>
+      <li><a href="about.html">關於老師</a></li>
+      <li><a href="articles.html">命理文章</a></li>
+      <li><a href="booking.html">預約諮詢</a></li>
+      <li><a href="contact.html" class="active">聯絡我們</a></li>
+    </ul>
+    <a href="booking.html" class="nav-cta">立即預約</a>
+    <button class="menu-toggle" onclick="document.getElementById('drawer').classList.add('open')">☰</button>
+  </nav>
+</header>
+
+<div class="mobile-drawer" id="drawer">
+  <button class="close" onclick="document.getElementById('drawer').classList.remove('open')">×</button>
+  <a href="index.html">首頁</a>
+  <a href="services.html">服務項目</a>
+  <a href="about.html">關於老師</a>
+  <a href="articles.html">命理文章</a>
+  <a href="booking.html">預約諮詢</a>
+  <a href="contact.html">聯絡我們</a>
+</div>
+
+<section class="page-header">
+  <h1>聯絡我們</h1>
+  <div class="breadcrumb"><a href="index.html">首頁</a><span class="sep">／</span>聯絡我們</div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="contact-grid">
+
+      <div class="contact-info">
+        <h3>聯絡資訊</h3>
+        <p style="color:var(--ink-soft);font-size:14px;margin-bottom:24px;letter-spacing:.05em">
+          有任何疑問都歡迎透過以下方式聯繫,我們會在最短時間內回覆您。
+        </p>
+
+        <div class="contact-item">
+          <div class="ico">址</div>
+          <div>
+            <div class="label">會館地址</div>
+            <div class="val">台北市大安區安和路二段 88 號 5 樓</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ico">電</div>
+          <div>
+            <div class="label">電話</div>
+            <div class="val">(02) 2700-0000</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ico">L</div>
+          <div>
+            <div class="label">LINE 官方帳號</div>
+            <div class="val">@suiyuantang</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ico">@</div>
+          <div>
+            <div class="label">電子信箱</div>
+            <div class="val">hello@suiyuantang.tw</div>
+          </div>
+        </div>
+
+        <div class="contact-item">
+          <div class="ico">時</div>
+          <div>
+            <div class="label">營業時間</div>
+            <div class="val">週二 — 週日 ‧ 11:00 — 21:00<br/><span style="font-size:13px;color:var(--ink-mute)">(週一公休 ‧ 採完全預約制)</span></div>
+          </div>
+        </div>
+
+        <div style="margin-top:32px;padding-top:24px;border-top:1px solid var(--line)">
+          <div style="font-size:13px;letter-spacing:.25em;color:var(--ink-mute);margin-bottom:14px">交通資訊</div>
+          <div style="font-size:14px;color:var(--ink-soft);line-height:1.85">
+            ‧ 捷運:信義安和站 4 號出口,步行約 5 分鐘<br/>
+            ‧ 公車:安和路口站<br/>
+            ‧ 停車:鄰近 Times 停車場
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick contact form -->
+      <div>
+        <h3 style="font-size:22px;letter-spacing:.2em;margin-bottom:8px">留言給我們</h3>
+        <p style="color:var(--ink-soft);font-size:14px;margin-bottom:32px;letter-spacing:.05em">
+          若您有合作邀約、媒體訪談、課程合作等需求,歡迎透過此表單聯繫。<br/>
+          一般命理諮詢請使用 <a href="booking.html" style="color:var(--gold-dark);border-bottom:1px solid var(--gold)">預約表單</a>。
+        </p>
+
+        <form class="form-wrap" style="padding:40px 36px" onsubmit="return submitContact(event)">
+          <div class="form-row">
+            <div class="form-field">
+              <label>姓名 <span class="required">*</span></label>
+              <input type="text" name="name" required />
+            </div>
+            <div class="form-field">
+              <label>聯絡電話</label>
+              <input type="tel" name="phone" />
+            </div>
+          </div>
+
+          <div class="form-field">
+            <label>電子信箱 <span class="required">*</span></label>
+            <input type="email" name="email" required />
+          </div>
+
+          <div class="form-field">
+            <label>主旨 <span class="required">*</span></label>
+            <select name="subject" required>
+              <option value="">請選擇</option>
+              <option>一般詢問</option>
+              <option>合作邀約</option>
+              <option>媒體採訪</option>
+              <option>工作坊 / 課程合作</option>
+              <option>其他</option>
+            </select>
+          </div>
+
+          <div class="form-field">
+            <label>內容 <span class="required">*</span></label>
+            <textarea name="message" required placeholder="請說明您的需求與背景..."></textarea>
+          </div>
+
+          <div class="form-actions">
+            <button type="submit" class="btn-primary">送出訊息 →</button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- Map -->
+<section class="section section-soft" style="padding-top:0">
+  <div class="container">
+    <div class="section-head">
+      <span class="section-eyebrow">LOCATION</span>
+      <h2>會館位置</h2>
+      <div class="divider"></div>
+    </div>
+
+    <div style="height:420px;border-radius:4px;border:1px solid var(--line);
+      background:
+        repeating-linear-gradient(45deg, transparent 0 24px, rgba(201,169,97,.06) 24px 25px),
+        linear-gradient(135deg, var(--bg-warm), var(--bg-soft));
+      display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;
+      position:relative;overflow:hidden">
+
+      <div style="font-family:'Noto Serif TC',serif;font-size:96px;color:var(--gold-dark);opacity:.3;letter-spacing:.1em">緣</div>
+      <div style="font-size:16px;letter-spacing:.2em;color:var(--ink)">台北市大安區安和路二段 88 號 5 樓</div>
+      <div style="font-size:13px;letter-spacing:.15em;color:var(--ink-mute)">捷運信義安和站 4 號出口 ‧ 步行 5 分鐘</div>
+
+      <a href="https://www.google.com/maps" target="_blank" rel="noopener" class="btn-ghost" style="margin-top:18px">在 Google 地圖開啟 ↗</a>
+    </div>
+  </div>
+</section>
+
+<section class="cta-banner">
+  <h2>願在此處 ‧ 與您相遇</h2>
+  <p>不論是命理疑惑、人生抉擇、或只是想找個地方靜下來——隨緣堂的門,為您敞開。</p>
+  <a href="booking.html" class="btn-primary">立即預約諮詢</a>
+</section>
+
+<footer class="footer">
+  <div class="footer-grid">
+    <div>
+      <div class="footer-brand">
+        <div class="brand-mark">緣</div>
+        <div>
+          <div class="brand-name">隨緣堂</div>
+          <div class="brand-sub" style="color:#9b9684">SUI YUAN TANG</div>
+        </div>
+      </div>
+      <p class="footer-desc">以紫微斗數與八字命理為徑,陪伴每一位來訪者梳理命運的脈絡。</p>
+    </div>
+    <div>
+      <h4>服務項目</h4>
+      <ul>
+        <li><a href="services.html#ziwei">紫微斗數</a></li>
+        <li><a href="services.html#bazi">八字論命</a></li>
+        <li><a href="services.html#pair">合婚擇日</a></li>
+        <li><a href="services.html#yearly">流年運勢</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>關於我們</h4>
+      <ul>
+        <li><a href="about.html">老師簡介</a></li>
+        <li><a href="articles.html">命理文章</a></li>
+        <li><a href="contact.html">聯絡資訊</a></li>
+        <li><a href="booking.html">預約諮詢</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>聯絡方式</h4>
+      <ul>
+        <li>地址:台北市大安區安和路二段</li>
+        <li>電話:02-2700-0000</li>
+        <li>LINE:@suiyuantang</li>
+        <li>信箱:hello@suiyuantang.tw</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 隨緣堂 SUI YUAN TANG. All rights reserved.</div>
+    <div>命理為參考之用,人生選擇仍在自己手中。</div>
+  </div>
+</footer>
+
+<script>
+function submitContact(e){
+  e.preventDefault();
+  alert('訊息已送出!\n\n我們將盡快透過電子信箱與您聯繫。\n\n— 隨緣堂 敬上');
+  e.target.reset();
+  return false;
+}
+</script>
+
+</body>
+</html>
