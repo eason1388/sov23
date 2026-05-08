@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<title>隨緣堂 | 紫微斗數 ‧ 八字命理</title>
-<meta name="description" content="隨緣堂——以紫微斗數與八字命理為人指引方向,在浮沉之間覓得安頓。" />
+<title>隨緣堂 ‧ 命理札記</title>
+<meta name="description" content="隨緣堂——一森的命理生活札記。八字、紫微斗數、風水的二十年隨筆。" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
@@ -12,7 +12,6 @@
 </head>
 <body>
 
-<!-- Header -->
 <header class="site-header">
   <nav class="nav">
     <a href="index.html" class="brand">
@@ -24,252 +23,186 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html" class="active">首頁</a></li>
-      <li><a href="services.html">服務項目</a></li>
-      <li><a href="about.html">關於老師</a></li>
       <li><a href="articles.html">命理札記</a></li>
-      <li><a href="booking.html">預約諮詢</a></li>
+      <li><a href="about.html">關於老師</a></li>
       <li><a href="contact.html">聯絡我們</a></li>
     </ul>
-    <a href="booking.html" class="nav-cta">立即預約</a>
     <button class="menu-toggle" onclick="document.getElementById('drawer').classList.add('open')">☰</button>
   </nav>
 </header>
 
-<!-- Mobile drawer -->
 <div class="mobile-drawer" id="drawer">
   <button class="close" onclick="document.getElementById('drawer').classList.remove('open')">×</button>
   <a href="index.html">首頁</a>
-  <a href="services.html">服務項目</a>
-  <a href="about.html">關於老師</a>
   <a href="articles.html">命理札記</a>
-  <a href="booking.html">預約諮詢</a>
+  <a href="about.html">關於老師</a>
   <a href="contact.html">聯絡我們</a>
 </div>
 
-<!-- Hero -->
 <section class="hero">
   <div class="hero-eyebrow">SUI YUAN TANG ‧ 隨 緣 而 安</div>
-  <h1>觀<span class="accent">命</span>盤之變 ‧ 行<span class="accent">緣</span>分之路</h1>
+  <h1>命有<span class="accent">定</span>數 ‧ 心有<span class="accent">所</span>歸</h1>
   <p class="hero-tagline">
-    以紫微斗數與八字命理為徑,陪您看清此生流轉的脈絡。<br/>
-    命定有定數,人生卻有選擇——隨緣堂,願為您點亮一盞引路的燈。
+    這裡沒有販售任何服務,沒有收費項目。<br/>
+    只是一個習命二十多年的人,把走過的人事與盤面,寫成隨手的札記。<br/>
+    如果某一句話正好對上您的心境,那就是緣分。
   </p>
   <div class="hero-cta">
-    <a href="booking.html" class="btn-primary">預約一對一諮詢 →</a>
-    <a href="services.html" class="btn-ghost">了解服務內容</a>
+    <a href="articles.html" class="btn-primary">翻閱命理札記 →</a>
+    <a href="about.html" class="btn-ghost">關於一森</a>
   </div>
 </section>
 
-<!-- Services -->
 <section class="section">
   <div class="container">
     <div class="section-head">
-      <span class="section-eyebrow">OUR SERVICES</span>
-      <h2>命理服務</h2>
+      <span class="section-eyebrow">THREE STUDIES</span>
+      <h2>札記的三條路徑</h2>
       <div class="divider"></div>
-      <p class="lead">融合古典命理智慧與現代諮詢方式,協助您在事業、感情、家庭各面向找到屬於自己的步調。</p>
+      <p class="lead">二十年的研習,化作三條相互交織的小徑——八字、紫微、風水。彼此映照,彼此補位。</p>
     </div>
 
     <div class="service-grid">
-      <div class="service-card">
+      <a href="articles.html#bazi" class="service-card">
+        <div class="service-icon">八</div>
+        <h3>八字</h3>
+        <p>從天干地支到五行流轉,八字是把人生濃縮成八個字的古老智慧。</p>
+        <div class="more">十篇札記 →</div>
+      </a>
+
+      <a href="articles.html#ziwei" class="service-card">
         <div class="service-icon">紫</div>
         <h3>紫微斗數</h3>
-        <p>以一百零八顆主副星辰,排出您的命宮、夫妻、事業等十二宮位,推演一生格局與流年走勢。</p>
-        <div class="price">NT$ 2,800 起 / 90 分鐘</div>
-        <a href="services.html#ziwei" class="more">深入了解 →</a>
-      </div>
+        <p>一百零八顆星辰落入十二宮位,把命運描繪得像一張星圖。</p>
+        <div class="more">十篇札記 →</div>
+      </a>
 
-      <div class="service-card">
-        <div class="service-icon">八</div>
-        <h3>八字論命</h3>
-        <p>從出生年月日時推算天干地支,觀察五行生剋與大運起伏,洞察命主的本質與一生運勢。</p>
-        <div class="price">NT$ 2,400 起 / 75 分鐘</div>
-        <a href="services.html#bazi" class="more">深入了解 →</a>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">合</div>
-        <h3>合婚擇日</h3>
-        <p>男女八字合參,評估彼此能量是否相互滋養;並擇黃道吉日,助您於人生重要關卡乘風而行。</p>
-        <div class="price">NT$ 3,600 起</div>
-        <a href="services.html#pair" class="more">深入了解 →</a>
-      </div>
-
-      <div class="service-card">
-        <div class="service-icon">運</div>
-        <h3>流年運勢</h3>
-        <p>細看當年度十二月份的運勢起伏與重點事件,規劃進退時機,把握有利之時、避開無謂之損。</p>
-        <div class="price">NT$ 1,800 起 / 60 分鐘</div>
-        <a href="services.html#yearly" class="more">深入了解 →</a>
-      </div>
+      <a href="articles.html#fengshui" class="service-card">
+        <div class="service-icon">水</div>
+        <h3>風水</h3>
+        <p>看似談空間,實則談人與環境的能量對話,以及怎麼住得舒坦。</p>
+        <div class="more">十篇札記 →</div>
+      </a>
     </div>
   </div>
 </section>
 
-<!-- Feature -->
 <section class="section section-soft">
   <div class="container">
     <div class="feature">
       <div class="feature-image">
-        <div class="seal">命</div>
+        <div class="seal">緣</div>
       </div>
       <div>
-        <span class="section-eyebrow">WHY US</span>
-        <h2>為什麼選擇隨緣堂</h2>
+        <span class="section-eyebrow">ABOUT</span>
+        <h2>札記者 ‧ 一森</h2>
         <div style="width:48px;height:1px;background:var(--gold);margin:18px 0 28px"></div>
-        <p class="lead">命理不是命定的判決,而是一張地圖。我們相信每個人都有選擇的力量,而我們所做的,是協助您看清這張地圖。</p>
+        <p class="lead">人生大起大落過,所以更懂得在跌倒時看清楚地面的紋理。研究命理二十多年,把自己的故事寫進每一場觀察。</p>
 
         <ul class="feature-list">
           <li>
             <span class="num">壹</span>
             <div>
-              <strong>古今並重的論斷方法</strong>
-              <p>傳承古籍經典推演架構,結合現代心理學語言,讓您聽得懂、用得上。</p>
+              <strong>不是大師,只是一個觀察者</strong>
+              <p>札記不打算給人答案,只想記下自己在命理之路上的疑惑與領悟。</p>
             </div>
           </li>
           <li>
             <span class="num">貳</span>
             <div>
-              <strong>不販售改運法器</strong>
-              <p>我們不會以恐嚇方式推銷補運品。命理應是引導,而非牟利的工具。</p>
+              <strong>沒有販賣,只有分享</strong>
+              <p>這個網站不收費、不接單、不賣法器。願意寫,只因為某些字若被讀到,就值了。</p>
             </div>
           </li>
           <li>
             <span class="num">參</span>
             <div>
-              <strong>嚴格保密</strong>
-              <p>每位來客的個人資訊與諮詢內容,皆於諮詢結束後妥善處理,絕不外流。</p>
-            </div>
-          </li>
-          <li>
-            <span class="num">肆</span>
-            <div>
-              <strong>提供完整命書</strong>
-              <p>諮詢後贈送專屬命書 PDF,可隨時翻閱回顧重點建議。</p>
+              <strong>歡迎用 email 來信交流</strong>
+              <p>有共鳴、有疑問、有想討論的觀點,都歡迎寄信給我。我會在心情比較沉靜的時候回覆。</p>
             </div>
           </li>
         </ul>
+
+        <div style="margin-top:36px"><a href="about.html" class="btn-ghost">深入認識一森 →</a></div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- Testimonials -->
-<section class="section">
-  <div class="container">
-    <div class="section-head">
-      <span class="section-eyebrow">TESTIMONIALS</span>
-      <h2>客戶見證</h2>
-      <div class="divider"></div>
-      <p class="lead">那些走進隨緣堂的人,後來都怎麼說我們?</p>
-    </div>
-
-    <div class="testi-grid">
-      <div class="testi-card">
-        <p class="testi-text">老師沒有給我「答案」,而是讓我重新看見問題。離開時心裡有種被理解的踏實感,職涯方向也更清楚了。</p>
-        <div class="testi-author">
-          <div class="testi-avatar">林</div>
-          <div>
-            <div class="testi-name">林小姐</div>
-            <div class="testi-role">行銷企劃 ‧ 32 歲</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <p class="testi-text">第一次接觸紫微,本來抱著半信半疑。老師很有耐心地解釋盤面,沒有故弄玄虛,反而像是在跟一位長輩聊天。</p>
-        <div class="testi-author">
-          <div class="testi-avatar">陳</div>
-          <div>
-            <div class="testi-name">陳先生</div>
-            <div class="testi-role">軟體工程師 ‧ 38 歲</div>
-          </div>
-        </div>
-      </div>
-
-      <div class="testi-card">
-        <p class="testi-text">合婚那次的諮詢,讓我和未婚夫對彼此差異有更深的理解。我們現在會把當時的命書拿出來討論,變成感情的潤滑劑。</p>
-        <div class="testi-author">
-          <div class="testi-avatar">王</div>
-          <div>
-            <div class="testi-name">王太太</div>
-            <div class="testi-role">教師 ‧ 29 歲</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- 札記預覽 -->
 <section class="journal-bg" style="padding:90px 24px">
   <div style="max-width:780px;margin:0 auto">
     <div class="section-head" style="margin-bottom:48px">
       <span class="section-eyebrow">NOTEBOOK</span>
-      <h2 style="font-family:'Noto Serif TC',serif">命理札記</h2>
+      <h2 style="font-family:'Noto Serif TC',serif">近期札記</h2>
       <div class="divider"></div>
-      <p class="lead" style="font-style:italic">習命二十載,留下的隻字片語。<br/>沒有絕對答案,只有願意與您一起想想的句子。</p>
+      <p class="lead" style="font-style:italic">每一篇都是某個午後或深夜的隨手記。</p>
     </div>
 
     <article class="entry">
       <div class="entry-meta">
-        <span class="entry-date">穀雨 ‧ 四月二十</span>
-        <span class="entry-cat">流年</span>
-      </div>
-      <h2 class="entry-title">立夏將至,六月會是個躁動的月份</h2>
-      <p class="entry-excerpt">
-        從穀雨走進立夏,空氣裡的濕度先升,然後是溫度。今年丙午年走到午月,等於<em>火氣疊火氣</em>,人心容易跟著浮動。最近諮詢的客人,話題反覆繞著「想換工作」「想離開現有關係」,並非巧合……
-      </p>
-      <div class="entry-foot">
-        <span>5 分鐘閱讀</span><a href="articles.html" class="read-more">展開全文 →</a>
-      </div>
-    </article>
-
-    <article class="entry">
-      <div class="entry-meta">
-        <span class="entry-date">清明 ‧ 四月七</span>
+        <span class="entry-date">乙巳 ‧ 二〇二五年十一月</span>
         <span class="entry-cat">紫微</span>
       </div>
-      <h2 class="entry-title">命宮的星辰,決定一生的底色?</h2>
+      <h2 class="entry-title">化忌不可怕,理解它才能用它</h2>
       <p class="entry-excerpt">
-        有人來諮詢,劈頭就問:「老師,我命宮是貪狼,是不是注定花心?」我聽了笑出來。命宮主星確實是最直接的性格基調,但它從來不是「決定」,而是<em>「傾向」</em>……
+        紫微學裡的「化忌」是被誤解最深的概念之一。它不是「不好的東西」,它是<em>「在意」</em>本身。一個人對哪一宮投入最多執著,那一宮就容易出現化忌。理解這層,才能把化忌從詛咒變成提醒……
       </p>
       <div class="entry-foot">
-        <span>6 分鐘閱讀</span><a href="articles.html" class="read-more">展開全文 →</a>
+        <span>2,100 字</span><a href="ziwei-09.html" class="read-more">展開全文 →</a>
       </div>
     </article>
 
     <article class="entry">
       <div class="entry-meta">
-        <span class="entry-date">春分 ‧ 三月二十</span>
-        <span class="entry-cat">命理生活</span>
+        <span class="entry-date">甲辰 ‧ 二〇二四年八月</span>
+        <span class="entry-cat">風水</span>
       </div>
-      <h2 class="entry-title">為什麼有些人「越算越亂」?</h2>
+      <h2 class="entry-title">客廳是全家氣場的中心,別小看那張沙發的位置</h2>
       <p class="entry-excerpt">
-        一位老客人坦白告訴我,她過去三年找過七位老師,每一次論命結束都覺得很有道理,但回家後反而更焦慮。我聽了之後直接說:那妳該停的,不是再找下一位老師,而是<em>停下來面對自己</em>……
+        客廳這個空間,看似只是大家湊在一起看電視的地方,但從風水的角度來看,它幾乎決定了一個家的<em>氣場基調</em>。沙發朝向、茶几高度、燈光方向、走道流線——每一個細節都在悄悄影響著住在裡面的人……
       </p>
       <div class="entry-foot">
-        <span>7 分鐘閱讀</span><a href="articles.html" class="read-more">展開全文 →</a>
+        <span>1,950 字</span><a href="fengshui-03.html" class="read-more">展開全文 →</a>
+      </div>
+    </article>
+
+    <article class="entry">
+      <div class="entry-meta">
+        <span class="entry-date">癸卯 ‧ 二〇二三年三月</span>
+        <span class="entry-cat">八字</span>
+      </div>
+      <h2 class="entry-title">用神:八字裡最被神化也最被誤解的概念</h2>
+      <p class="entry-excerpt">
+        我學八字的前五年,一直把「找用神」當成終極答案。直到自己人生跌過一輪才明白——用神不是萬靈丹,它只是<em>讓五行流動的那一個元素</em>。它能讓你過得舒服一點,但無法把命格徹底翻盤……
+      </p>
+      <div class="entry-foot">
+        <span>2,080 字</span><a href="bazi-04.html" class="read-more">展開全文 →</a>
       </div>
     </article>
 
     <div style="text-align:center;margin-top:60px;padding-top:40px;border-top:1px dashed var(--gold-light)">
-      <p style="font-size:13px;letter-spacing:.4em;color:var(--ink-mute);margin-bottom:18px">— 共二十則札記 ‧ 持續更新中 —</p>
-      <a href="articles.html" class="btn-ghost">翻閱整本札記 →</a>
+      <p style="font-size:13px;letter-spacing:.4em;color:var(--ink-mute);margin-bottom:18px">— 共三十篇札記 ‧ 八字 ‧ 紫微 ‧ 風水 —</p>
+      <a href="articles.html" class="btn-ghost">翻閱完整札記本 →</a>
     </div>
   </div>
 </section>
 
-<!-- CTA banner -->
-<section class="cta-banner">
-  <h2>命有定數 ‧ 路有萬條</h2>
-  <p>讓我們陪您看見格局,在命運的紋理中,找到屬於自己的安頓。</p>
-  <a href="booking.html" class="btn-primary">立即預約諮詢</a>
+<section class="section">
+  <div class="container" style="max-width:780px;text-align:center">
+    <span class="section-eyebrow">EPILOGUE</span>
+    <h2 style="font-size:30px;letter-spacing:.2em;margin:18px 0">寫在最後</h2>
+    <div class="divider"></div>
+    <p style="color:var(--ink-soft);font-size:16px;line-height:2;letter-spacing:.05em;margin-top:24px">
+      這個網站沒有預約系統,沒有收費表,也沒有「立即諮詢」的按鈕。<br/>
+      它只是一本被分享出來的札記。<br/>
+      如果有什麼想聊的,寫信來就好——<br/>
+      <a href="mailto:jackkok1888@gmail.com" style="color:var(--gold-dark);border-bottom:1px solid var(--gold);padding-bottom:2px">jackkok1888@gmail.com</a>
+    </p>
+  </div>
 </section>
 
-<!-- Footer -->
 <footer class="footer">
-  <div class="footer-grid">
+  <div class="footer-grid" style="grid-template-columns:2fr 1fr 1fr">
     <div>
       <div class="footer-brand">
         <div class="brand-mark">緣</div>
@@ -278,9 +211,31 @@
           <div class="brand-sub" style="color:#9b9684">SUI YUAN TANG</div>
         </div>
       </div>
-      <p class="footer-desc">以紫微斗數與八字命理為徑,陪伴每一位來訪者梳理命運的脈絡,在浮沉之間覓得安頓。</p>
+      <p class="footer-desc">一森的命理生活札記。八字、紫微、風水的二十年隨筆。<br/>不販售、不接單、不賣法器,只分享。</p>
     </div>
     <div>
-      <h4>服務項目</h4>
+      <h4>札記分類</h4>
       <ul>
-        <li><a href="services.html#ziwei">紫微斗數</a><
+        <li><a href="articles.html#bazi">八字</a></li>
+        <li><a href="articles.html#ziwei">紫微斗數</a></li>
+        <li><a href="articles.html#fengshui">風水</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>連結</h4>
+      <ul>
+        <li><a href="index.html">首頁</a></li>
+        <li><a href="articles.html">命理札記</a></li>
+        <li><a href="about.html">關於一森</a></li>
+        <li><a href="contact.html">聯絡我們</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div>© 2026 隨緣堂 SUI YUAN TANG. All rights reserved.</div>
+    <div>命理為參考,人生選擇仍在自己手中。</div>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -4,7 +4,7 @@
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
 <title>命理札記 | 隨緣堂</title>
-<meta name="description" content="隨緣堂的命理札記——紫微、八字、流年、人事的日常隨筆。" />
+<meta name="description" content="一森的命理生活札記——八字、紫微斗數、風水共三十篇隨筆。" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
@@ -23,13 +23,10 @@
     </a>
     <ul class="nav-links">
       <li><a href="index.html">首頁</a></li>
-      <li><a href="services.html">服務項目</a></li>
-      <li><a href="about.html">關於老師</a></li>
       <li><a href="articles.html" class="active">命理札記</a></li>
-      <li><a href="booking.html">預約諮詢</a></li>
+      <li><a href="about.html">關於老師</a></li>
       <li><a href="contact.html">聯絡我們</a></li>
     </ul>
-    <a href="booking.html" class="nav-cta">立即預約</a>
     <button class="menu-toggle" onclick="document.getElementById('drawer').classList.add('open')">☰</button>
   </nav>
 </header>
@@ -37,12 +34,15 @@
 <div class="mobile-drawer" id="drawer">
   <button class="close" onclick="document.getElementById('drawer').classList.remove('open')">×</button>
   <a href="index.html">首頁</a>
-  <a href="services.html">服務項目</a>
-  <a href="about.html">關於老師</a>
   <a href="articles.html">命理札記</a>
-  <a href="booking.html">預約諮詢</a>
+  <a href="about.html">關於老師</a>
   <a href="contact.html">聯絡我們</a>
 </div>
+
+<section class="page-header">
+  <h1>命理札記</h1>
+  <div class="breadcrumb"><a href="index.html">首頁</a><span class="sep">／</span>命理札記</div>
+</section>
 
 <main class="journal-bg">
   <div class="journal-wrap">
@@ -50,367 +50,495 @@
     <div class="journal-intro">
       <div class="stamp">緣</div>
       <div class="sub">SUI YUAN ‧ NOTEBOOK</div>
-      <h1>命理札記</h1>
+      <h1>三十篇札記</h1>
       <p class="preface">
-        命盤如紙,人生如墨。<br/>
-        這裡是我多年論命之餘,隨手記下的觀察與思索。<br/>
-        沒有絕對的答案,只有願意陪您一起想想的句子。
+        二〇一六到二〇二五,十年的習命與生活。<br/>
+        分為三條路徑:八字、紫微斗數、風水。每一篇都是一段觀察、一場領悟、一次人生的回望。
       </p>
     </div>
 
     <div class="journal-cats">
       <div class="journal-cat active" onclick="filterEntry(this,'all')">全部</div>
-      <div class="journal-cat" onclick="filterEntry(this,'ziwei')">紫微</div>
       <div class="journal-cat" onclick="filterEntry(this,'bazi')">八字</div>
-      <div class="journal-cat" onclick="filterEntry(this,'yearly')">流年</div>
-      <div class="journal-cat" onclick="filterEntry(this,'love')">情感</div>
-      <div class="journal-cat" onclick="filterEntry(this,'life')">命理生活</div>
-      <div class="journal-cat" onclick="filterEntry(this,'season')">節氣隨筆</div>
+      <div class="journal-cat" onclick="filterEntry(this,'ziwei')">紫微斗數</div>
+      <div class="journal-cat" onclick="filterEntry(this,'fengshui')">風水</div>
     </div>
 
     <div id="entries">
 
-      <div class="month-divider"><span>二〇二六 ‧ 春<span class="ji">春</span></span></div>
-
-      <article class="entry" data-cat="yearly">
-        <div class="entry-meta">
-          <span class="entry-date">穀雨 ‧ 四月二十</span>
-          <span class="entry-num">第 二〇 則</span>
-          <span class="entry-cat">流年</span>
-        </div>
-        <h2 class="entry-title">立夏將至,六月會是個躁動的月份</h2>
-        <p class="entry-excerpt">
-          每年從穀雨走進立夏,空氣裡的濕度先升,然後是溫度。今年丙午年走到午月,等於<em>火氣疊火氣</em>,人心容易跟著浮動。最近諮詢的客人,話題反覆繞著「想換工作」「想離開現有關係」這幾個方向,並非巧合。火主動、主衝,衝得太急,反而看不清方向。
-        </p>
-        <p class="entry-pull">「動之前,先問問自己:是逃避,還是真正想往哪裡去?」</p>
-        <div class="entry-foot">
-          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="ziwei">
-        <div class="entry-meta">
-          <span class="entry-date">清明 ‧ 四月七</span>
-          <span class="entry-num">第 一九 則</span>
-          <span class="entry-cat">紫微</span>
-        </div>
-        <h2 class="entry-title">命宮的星辰,決定一生的底色?</h2>
-        <p class="entry-excerpt">
-          有人來諮詢,劈頭就問:「老師,我命宮是貪狼,是不是注定花心?」我聽了笑出來。命宮主星確實是最直接的性格基調,但它從來不是<em>「決定」</em>,而是<em>「傾向」</em>。同樣一顆貪狼,有人成為熱情的企劃,有人成為深情的廚師,差別在於三方四正的拉扯,以及這個人有沒有意識去調整自己。
-        </p>
-        <div class="entry-foot">
-          <span>6 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="life">
-        <div class="entry-meta">
-          <span class="entry-date">春分 ‧ 三月二十</span>
-          <span class="entry-num">第 一八 則</span>
-          <span class="entry-cat">命理生活</span>
-        </div>
-        <h2 class="entry-title">為什麼有些人「越算越亂」?</h2>
-        <p class="entry-excerpt">
-          一位老客人坦白告訴我,她過去三年找過七位老師,每一次論命結束都覺得很有道理,但回家後反而更焦慮。我聽了之後直接說:那妳該停的,不是再找下一位老師,而是<em>停下來面對自己</em>。命理工具本身沒問題,問題是把它當成「逃避自己」的方法。當答案被外人說出口,你的人生就不再屬於你。
-        </p>
-        <p class="entry-pull">「命理是鏡子,不是處方箋。」</p>
-        <div class="entry-foot">
-          <span>7 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="yearly">
-        <div class="entry-meta">
-          <span class="entry-date">驚蟄 ‧ 三月五</span>
-          <span class="entry-num">第 一七 則</span>
-          <span class="entry-cat">流年</span>
-        </div>
-        <h2 class="entry-title">2026 丙午年:火氣旺盛之年的進退取捨</h2>
-        <p class="entry-excerpt">
-          丙午是<em>陽火坐午火</em>,等於太陽掛在正中天。這種年份的人事氣氛通常是「明亮、外擴、節奏快」,但也最容易因為熱情過頭而失了分寸。生肖屬鼠的朋友今年沖太歲,並非要恐慌,而是請把節奏放慢一格;屬馬的朋友本命年,反而要避免「為了動而動」。整體來說,丙午年適合<em>表達</em>,不適合<em>衝撞</em>。
-        </p>
-        <div class="entry-foot">
-          <span>8 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="love">
-        <div class="entry-meta">
-          <span class="entry-date">雨水 ‧ 二月十九</span>
-          <span class="entry-num">第 一六 則</span>
-          <span class="entry-cat">情感</span>
-        </div>
-        <h2 class="entry-title">夫妻宮的化忌,真的代表婚姻不順嗎?</h2>
-        <p class="entry-excerpt">
-          「化忌」這個詞聽起來很重,所以很多人一看到夫妻宮有化忌就心神不寧。但其實在命理語言裡,化忌的本質是<em>「在意」</em>。一個人對某個宮位投入越多執著,那一格就容易出現化忌。夫妻宮化忌的人,不是注定關係不順,而是「會把伴侶看得很重」——這份重,可以是甜的,也可以是壓力。差別在彼此能不能共同消化。
-        </p>
-        <p class="entry-pull">「在意,從來都是雙面刃。」</p>
-        <div class="entry-foot">
-          <span>6 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <div class="month-divider"><span>二〇二六 ‧ 立春之前<span class="ji">寒</span></span></div>
-
-      <article class="entry" data-cat="season">
-        <div class="entry-meta">
-          <span class="entry-date">立春 ‧ 二月四</span>
-          <span class="entry-num">第 一五 則</span>
-          <span class="entry-cat">節氣</span>
-        </div>
-        <h2 class="entry-title">立春才是新的一年開始,談八字流年的真正起點</h2>
-        <p class="entry-excerpt">
-          每年農曆春節前後,常有客人問:「老師,我已經過完年,是不是要看新的流年了?」其實不是。八字命理以<em>節氣</em>為界,新年起算於「立春」這一刻——通常落在國曆二月三日或四日。理解這個細節並不只是知識,它讓我們對「換運」這件事有更精準的時間感:不是看煙火,而是看陽氣何時真的回來。
-        </p>
-        <div class="entry-foot">
-          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
+      <!-- ============ 八字 BAZI ============ -->
+      <div class="month-divider" id="bazi" data-cat-marker="bazi"><span>八 字 ‧ 十 篇<span class="ji">字</span></span></div>
 
       <article class="entry" data-cat="bazi">
         <div class="entry-meta">
-          <span class="entry-date">大寒 ‧ 一月二十</span>
-          <span class="entry-num">第 一四 則</span>
-          <span class="entry-cat">八字</span>
-        </div>
-        <h2 class="entry-title">日主強弱怎麼看?五分鐘理解八字基本盤</h2>
-        <p class="entry-excerpt">
-          日主就是出生那一天的天干,代表「自己」。判斷日主強弱有幾個基本層次:得令(出生月份是否生扶日主)、得地(地支是否藏著本氣)、得勢(天干地支是否多印多比)。這三個條件越多,日主越強;反之則弱。但<em>強不等於好,弱不等於壞</em>——強日主需要洩,弱日主需要扶,真正的關鍵在「平衡」二字。
-        </p>
-        <div class="entry-foot">
-          <span>7 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="ziwei">
-        <div class="entry-meta">
-          <span class="entry-date">小寒 ‧ 一月五</span>
-          <span class="entry-num">第 一三 則</span>
-          <span class="entry-cat">紫微</span>
-        </div>
-        <h2 class="entry-title">財帛宮空宮,代表沒錢嗎?</h2>
-        <p class="entry-excerpt">
-          紫微盤上看到財帛宮「空宮」,大部分人會直覺反應:糟了,這代表沒財運嗎?其實不然。空宮會「借對宮」的星辰來看,這在古書裡稱為<em>「借星安宮」</em>。一個財帛空宮借了夫妻宮巨門天同的人,財運往往跟感情、家庭氣氛緊密相關;借了官祿宮太陽天梁的人,則可能透過事業地位來賺錢。空宮並不是空,而是<em>需要放眼更遠的地方</em>。
-        </p>
-        <p class="entry-pull">「空,是另一種看見。」</p>
-        <div class="entry-foot">
-          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <div class="month-divider"><span>二〇二五 ‧ 冬<span class="ji">藏</span></span></div>
-
-      <article class="entry" data-cat="life">
-        <div class="entry-meta">
-          <span class="entry-date">冬至 ‧ 十二月二十二</span>
-          <span class="entry-num">第 一二 則</span>
-          <span class="entry-cat">命理生活</span>
-        </div>
-        <h2 class="entry-title">當命理遇到心理學:看清自己,才是改變的起點</h2>
-        <p class="entry-excerpt">
-          命理跟心理學乍看似乎兩個世界,但真正讓兩者交會的,是對「人」的關心。命盤指出一個人可能的反應模式,心理學則告訴我們<em>為什麼會這樣反應</em>。當我幫客人解盤時,常常會引用一些心理學的語言,讓抽象的「化忌」「擎羊」變成可以日常實踐的覺察。命理不是用來預測命運的占卜術,而是讓我們看清自己,然後才有「不一樣」的可能。
-        </p>
-        <div class="entry-foot">
-          <span>6 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="bazi">
-        <div class="entry-meta">
-          <span class="entry-date">大雪 ‧ 十二月七</span>
-          <span class="entry-num">第 一一 則</span>
-          <span class="entry-cat">八字</span>
-        </div>
-        <h2 class="entry-title">什麼是「用神」?它真的能改變命運嗎?</h2>
-        <p class="entry-excerpt">
-          用神是八字裡最被誤解的概念之一。很多人以為「找到用神」就能改運,把它想得像萬靈丹。但用神的本意只是<em>「命局中能讓五行流動起來的那一個元素」</em>。它能讓你過得比較舒服,但不會把一塊岩石變成黃金。理解用神,是學會怎麼讓自己更輕鬆地活在自己的命格裡——這才是用神真正的意義。
-        </p>
-        <div class="entry-foot">
-          <span>9 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="ziwei">
-        <div class="entry-meta">
-          <span class="entry-date">小雪 ‧ 十一月二十二</span>
+          <span class="entry-date">二〇二五 ‧ 十月</span>
           <span class="entry-num">第 一〇 則</span>
-          <span class="entry-cat">紫微</span>
+          <span class="entry-cat">八字</span>
         </div>
-        <h2 class="entry-title">化祿不是天上掉下來的禮物</h2>
+        <a href="bazi-10.html" style="color:inherit"><h2 class="entry-title">從八字看人生格局:格局不是高低,而是節奏</h2></a>
         <p class="entry-excerpt">
-          化祿在紫微裡常被當作「好運」的代名詞,但仔細看就會發現:化祿是<em>「投入」與「累積」</em>的果實。哪一宮化祿,哪一宮就是你願意花時間經營的地方。某顆星沒有化祿,不代表那一塊註定貧瘠,只代表你沒有把心力放在那裡。所以,看到別人盤上化祿不要羨慕——他可能也羨慕著你盤上那顆,你卻從來沒在意過的星。
-        </p>
-        <p class="entry-pull">「祿是耕耘的回報,不是恩賜。」</p>
-        <div class="entry-foot">
-          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="love">
-        <div class="entry-meta">
-          <span class="entry-date">立冬 ‧ 十一月七</span>
-          <span class="entry-num">第 〇 九 則</span>
-          <span class="entry-cat">情感</span>
-        </div>
-        <h2 class="entry-title">合婚迷思:八字「合」就一定幸福嗎?</h2>
-        <p class="entry-excerpt">
-          常有人在婚禮前一週急著找我合婚,我都說太晚了——但又不是來阻止的,是來提醒。八字相合代表雙方<em>能量上互相滋養</em>,但婚姻是「日復一日的選擇」,沒有任何八字會自動讓人選擇善待對方。我看過八字看似衝突卻相伴半生的夫妻,也看過八字完美卻三年內離異的伴侶。差別不在紙上,而在每天起床後願不願意再對對方溫柔一次。
+          這幾年我越來越不喜歡用「格局高低」來形容八字。所謂的<em>富貴格局</em>,放錯時代也是空談;所謂的<em>普通格局</em>,順了大運也能海闊天空。命格決定的不是你的成就,而是你<em>達成成就的節奏</em>……
         </p>
         <div class="entry-foot">
-          <span>7 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <div class="month-divider"><span>二〇二五 ‧ 秋<span class="ji">收</span></span></div>
-
-      <article class="entry" data-cat="life">
-        <div class="entry-meta">
-          <span class="entry-date">霜降 ‧ 十月二十三</span>
-          <span class="entry-num">第 〇 八 則</span>
-          <span class="entry-cat">命理生活</span>
-        </div>
-        <h2 class="entry-title">關於改名,我想說的幾件事</h2>
-        <p class="entry-excerpt">
-          改名是個常見的話題。我必須誠實說:改名能改變的東西,比大部分人想像的小很多。<em>名字會影響社交印象、頻率、自我認同</em>,但它無法逆轉命格本質。我不反對改名,但我反對「以為改了名一切就會好起來」。真正改變人生的,從來都不是兩個字,而是<em>每天做出的微小選擇</em>。
-        </p>
-        <div class="entry-foot">
-          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="ziwei">
-        <div class="entry-meta">
-          <span class="entry-date">寒露 ‧ 十月八</span>
-          <span class="entry-num">第 〇 七 則</span>
-          <span class="entry-cat">紫微</span>
-        </div>
-        <h2 class="entry-title">擎羊在福德宮,不是凶,是執著</h2>
-        <p class="entry-excerpt">
-          擎羊是把刀,進到福德宮聽起來嚇人,但仔細看會發現,擎羊在福德宮的人,大多很有<em>主見、堅持、不輕易妥協</em>。他們的人生關鍵字不是「享受」,而是「完成」。痛苦的時候不是因為命差,而是因為他們不允許自己隨便算了。這不是壞事——只是需要學會,有時候放下也是一種勝利。
-        </p>
-        <div class="entry-foot">
-          <span>6 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="season">
-        <div class="entry-meta">
-          <span class="entry-date">秋分 ‧ 九月二十三</span>
-          <span class="entry-num">第 〇 六 則</span>
-          <span class="entry-cat">節氣</span>
-        </div>
-        <h2 class="entry-title">陰陽相平的這一天,適合放下一些什麼</h2>
-        <p class="entry-excerpt">
-          秋分是一年裡少數陰陽完全平衡的節氣之一。中醫講「秋主收」,人應該開始把外散的能量收回來,睡眠多一點、脾氣慢一點、計畫少一點。從命理角度看,這也是適合<em>放下執著</em>的時節——上半年沒做成的事,不必硬撐;下半年開始的事,不必急著開花。陰陽要平衡,人也是。
-        </p>
-        <p class="entry-pull">「秋分過後,我們學著不再用力。」</p>
-        <div class="entry-foot">
-          <span>4 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+          <span>2,150 字</span><a href="bazi-10.html" class="read-more">展開全文 →</a>
         </div>
       </article>
 
       <article class="entry" data-cat="bazi">
         <div class="entry-meta">
-          <span class="entry-date">白露 ‧ 九月八</span>
+          <span class="entry-date">二〇二四 ‧ 六月</span>
+          <span class="entry-num">第 〇 九 則</span>
+          <span class="entry-cat">八字</span>
+        </div>
+        <a href="bazi-09.html" style="color:inherit"><h2 class="entry-title">十神:八字裡的十種人際關係</h2></a>
+        <p class="entry-excerpt">
+          十神是八字裡最貼近現實生活的概念——比肩、劫財、食神、傷官、正財、偏財、正官、七殺、正印、偏印。每一個十神都對應著我們生命中某一類人,也對應著我們內在的某一種傾向……
+        </p>
+        <div class="entry-foot">
+          <span>2,080 字</span><a href="bazi-09.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="bazi">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二三 ‧ 三月</span>
+          <span class="entry-num">第 〇 八 則</span>
+          <span class="entry-cat">八字</span>
+        </div>
+        <a href="bazi-04.html" style="color:inherit"><h2 class="entry-title">用神:八字裡最被神化也最被誤解的概念</h2></a>
+        <p class="entry-excerpt">
+          我學八字的前五年,一直把「找用神」當成終極答案。直到自己人生跌過一輪才明白——用神不是萬靈丹,它只是<em>讓五行流動的那一個元素</em>。它能讓你過得舒服一點,但無法把命格徹底翻盤……
+        </p>
+        <div class="entry-foot">
+          <span>2,080 字</span><a href="bazi-04.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="bazi">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二二 ‧ 七月</span>
+          <span class="entry-num">第 〇 七 則</span>
+          <span class="entry-cat">八字</span>
+        </div>
+        <a href="bazi-08.html" style="color:inherit"><h2 class="entry-title">八字看健康:五行平衡的秘密</h2></a>
+        <p class="entry-excerpt">
+          八字命理中對健康的觀察,往往比一般人想像得細膩。木代表肝膽筋骨、火主心血管、土主脾胃、金管肺與大腸、水主腎與生殖系統。當命局某一行<em>過旺或過衰</em>,身體的某個系統就容易出狀況……
+        </p>
+        <div class="entry-foot">
+          <span>2,020 字</span><a href="bazi-08.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="bazi">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二一 ‧ 二月</span>
+          <span class="entry-num">第 〇 六 則</span>
+          <span class="entry-cat">八字</span>
+        </div>
+        <a href="bazi-07.html" style="color:inherit"><h2 class="entry-title">八字看感情:夫妻宮的密碼</h2></a>
+        <p class="entry-excerpt">
+          很多人以為八字看感情就是看「桃花」,其實桃花只是表象。真正決定感情走向的,是<em>日支(日柱地支)</em>的能量與十神配置。日支被沖、被合、被刑害的人,感情之路通常需要更多覺察……
+        </p>
+        <div class="entry-foot">
+          <span>1,980 字</span><a href="bazi-07.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="bazi">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二〇 ‧ 八月</span>
           <span class="entry-num">第 〇 五 則</span>
           <span class="entry-cat">八字</span>
         </div>
-        <h2 class="entry-title">「身弱」不是體弱,而是命局結構薄</h2>
+        <a href="bazi-06.html" style="color:inherit"><h2 class="entry-title">八字看財運:財星不等於財富</h2></a>
         <p class="entry-excerpt">
-          很多人聽到自己「身弱」就以為是健康差,其實八字裡的「身弱」是指<em>日主在命局中沒有得到足夠的支撐</em>。身弱的人不見得體弱,但他們確實比較容易被環境影響、容易委屈、容易把自己擺到後面。這樣的人格不是缺陷,而是需要學會「先把自己放到桌面上」。命理只是告訴你起跑點,跑哪裡是自己的事。
+          這幾年看了上百張盤,我發現一件事:八字裡<em>正財偏財旺</em>的人,不見得就有錢;反之,財星不顯的人,也不一定就窮。財運的真正指標,是「身財兩停」——日主與財星之間的拉力是否平衡……
         </p>
         <div class="entry-foot">
-          <span>6 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <div class="month-divider"><span>二〇二五 ‧ 夏<span class="ji">長</span></span></div>
-
-      <article class="entry" data-cat="love">
-        <div class="entry-meta">
-          <span class="entry-date">處暑 ‧ 八月二十三</span>
-          <span class="entry-num">第 〇 四 則</span>
-          <span class="entry-cat">情感</span>
-        </div>
-        <h2 class="entry-title">桃花年:那不是叫你急著找對象</h2>
-        <p class="entry-excerpt">
-          客人最常問的問題之一是:「老師,我今年有桃花嗎?」我每次都先反問:你想要的是什麼樣的桃花?<em>有些桃花是來陪伴你的,有些是來提醒你的</em>,還有些只是讓你看清自己一直以來在感情裡的盲點。桃花年最忌諱「為了證明自己有人要」而隨便進入關係——那是把好運用來懲罰自己。
-        </p>
-        <div class="entry-foot">
-          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="ziwei">
-        <div class="entry-meta">
-          <span class="entry-date">立秋 ‧ 八月七</span>
-          <span class="entry-num">第 〇 三 則</span>
-          <span class="entry-cat">紫微</span>
-        </div>
-        <h2 class="entry-title">紫微入命,真的就是「帝王命」嗎?</h2>
-        <p class="entry-excerpt">
-          紫微星進命宮的人,常被簡單貼上「帝王命」「天生領袖」的標籤,但實際諮詢過幾百位紫微坐命的客人,我發現他們比較常見的特質是<em>「孤」</em>。不是孤獨,而是「不太能完全依賴別人」。紫微星帶著一種隱性的責任感,讓他們無論在哪都會不自覺站到前面去。這是天賦,也是<em>需要學會放鬆的功課</em>。
-        </p>
-        <p class="entry-pull">「皇帝最累的,從來不是治國,是不能被理解。」</p>
-        <div class="entry-foot">
-          <span>7 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
-        </div>
-      </article>
-
-      <article class="entry" data-cat="life">
-        <div class="entry-meta">
-          <span class="entry-date">大暑 ‧ 七月二十三</span>
-          <span class="entry-num">第 〇 二 則</span>
-          <span class="entry-cat">命理生活</span>
-        </div>
-        <h2 class="entry-title">為什麼我不販售改運法器</h2>
-        <p class="entry-excerpt">
-          有人來諮詢時直接問:「老師,你這裡有沒有什麼可以買的補運品?」我都老實說沒有。<em>真正能改運的不是石頭、不是符紙,是你對自己的覺察與選擇</em>。我不是說那些東西完全沒效——它們可以給人安心感,而安心本身就有力量——但我不願意當那個利用恐懼賺錢的人。命理應該幫人站起來,而不是讓人離不開老師的口袋。
-        </p>
-        <div class="entry-foot">
-          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+          <span>2,100 字</span><a href="bazi-06.html" class="read-more">展開全文 →</a>
         </div>
       </article>
 
       <article class="entry" data-cat="bazi">
         <div class="entry-meta">
-          <span class="entry-date">小暑 ‧ 七月七</span>
+          <span class="entry-date">二〇一九 ‧ 五月</span>
+          <span class="entry-num">第 〇 四 則</span>
+          <span class="entry-cat">八字</span>
+        </div>
+        <a href="bazi-05.html" style="color:inherit"><h2 class="entry-title">大運與流年的差別,以及它們怎麼互動</h2></a>
+        <p class="entry-excerpt">
+          初學八字的人很容易把大運和流年搞混。<em>大運是十年一換的「人生階段」</em>,像是季節;<em>流年是每年一換的「當下天氣」</em>,像是日子。要看一個人某一年的命運,大運與流年的合作關係才是關鍵……
+        </p>
+        <div class="entry-foot">
+          <span>1,960 字</span><a href="bazi-05.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="bazi">
+        <div class="entry-meta">
+          <span class="entry-date">二〇一八 ‧ 十一月</span>
+          <span class="entry-num">第 〇 三 則</span>
+          <span class="entry-cat">八字</span>
+        </div>
+        <a href="bazi-03.html" style="color:inherit"><h2 class="entry-title">日主強弱怎麼判斷?寫給初學者的入門法</h2></a>
+        <p class="entry-excerpt">
+          日主代表「我」。判斷日主強弱要看三件事:<em>得令、得地、得勢</em>。得令是月令對日主有沒有支援;得地是地支藏不藏本氣;得勢是天干地支裡有沒有同類或印星。三者俱足為強,反之為弱……
+        </p>
+        <div class="entry-foot">
+          <span>2,030 字</span><a href="bazi-03.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="bazi">
+        <div class="entry-meta">
+          <span class="entry-date">二〇一七 ‧ 九月</span>
+          <span class="entry-num">第 〇 二 則</span>
+          <span class="entry-cat">八字</span>
+        </div>
+        <a href="bazi-02.html" style="color:inherit"><h2 class="entry-title">天干地支與五行:八字的基本骨架</h2></a>
+        <p class="entry-excerpt">
+          十天干、十二地支、五行生剋——這些看似古老的符號,其實是中國人對<em>時間能量</em>最精細的編碼。理解這套語言,就像學會了讀懂一本古老的密碼本……
+        </p>
+        <div class="entry-foot">
+          <span>2,070 字</span><a href="bazi-02.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="bazi">
+        <div class="entry-meta">
+          <span class="entry-date">二〇一六 ‧ 三月</span>
           <span class="entry-num">第 〇 一 則</span>
           <span class="entry-cat">八字</span>
         </div>
-        <h2 class="entry-title">寫在第一則札記之前</h2>
+        <a href="bazi-01.html" style="color:inherit"><h2 class="entry-title">八字入門:什麼是八字?它能看出什麼?</h2></a>
         <p class="entry-excerpt">
-          習命將近二十年,從來沒想過會把這些細碎的觀察寫下來。直到有一天,一位客人離開時對我說:「老師,我聽你講的這些,如果有寫下來就好了,我不見得當下都記得住。」於是有了這本札記。它不打算系統化、不打算當教科書,只是一個老命理人在多年看人之後,願意誠實寫下的<em>那些靠近真實的句子</em>。
+          八字是用<em>出生年月日時的天干地支</em>所構成的八個字。它不是預測未來的水晶球,而是一張關於「先天傾向」的時間圖譜。透過八字,我們能看見一個人的本質、節奏、容易遇到的人事、適合走的路……
         </p>
-        <p class="entry-pull">「願這些字,陪您在迷茫時,慢慢呼吸。」</p>
         <div class="entry-foot">
-          <span>3 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+          <span>2,050 字</span><a href="bazi-01.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+
+      <!-- ============ 紫微斗數 ZIWEI ============ -->
+      <div class="month-divider" id="ziwei" data-cat-marker="ziwei"><span>紫 微 斗 數 ‧ 十 篇<span class="ji">星</span></span></div>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二五 ‧ 十一月</span>
+          <span class="entry-num">第 一〇 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <a href="ziwei-09.html" style="color:inherit"><h2 class="entry-title">化忌不可怕,理解它才能用它</h2></a>
+        <p class="entry-excerpt">
+          紫微學裡的「化忌」是被誤解最深的概念之一。它不是「不好的東西」,它是<em>「在意」</em>本身。一個人對哪一宮投入最多執著,那一宮就容易出現化忌。理解這層,才能把化忌從詛咒變成提醒……
+        </p>
+        <div class="entry-foot">
+          <span>2,100 字</span><a href="ziwei-09.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二四 ‧ 二月</span>
+          <span class="entry-num">第 〇 九 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <a href="ziwei-10.html" style="color:inherit"><h2 class="entry-title">紫微大限:十年運勢怎麼推?</h2></a>
+        <p class="entry-excerpt">
+          紫微的大限,是命盤上「會走路的一張地圖」。每十年走一個宮位,代表這個階段的人生主題。<em>大限的宮位主星與本命三方四正的互動</em>,決定了這十年走得順不順、走得遠不遠……
+        </p>
+        <div class="entry-foot">
+          <span>2,040 字</span><a href="ziwei-10.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二三 ‧ 七月</span>
+          <span class="entry-num">第 〇 八 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <a href="ziwei-08.html" style="color:inherit"><h2 class="entry-title">財帛宮:紫微看財運的關鍵窗口</h2></a>
+        <p class="entry-excerpt">
+          財帛宮不是看「會不會發財」這麼簡單。它告訴我們<em>賺錢的方式、對錢的態度、財富的型態</em>。財帛宮坐紫微的人賺得體面,坐天府的人賺得穩健,坐貪狼的人賺得敏銳——星辰本身就是性格密碼……
+        </p>
+        <div class="entry-foot">
+          <span>1,990 字</span><a href="ziwei-08.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二二 ‧ 四月</span>
+          <span class="entry-num">第 〇 七 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <a href="ziwei-07.html" style="color:inherit"><h2 class="entry-title">夫妻宮:紫微看感情的窗口</h2></a>
+        <p class="entry-excerpt">
+          夫妻宮是紫微盤上最容易被「過度解讀」的一格。看到化忌就驚、看到擎羊就慌——其實,夫妻宮真正告訴我們的,是<em>「自己內在的感情藍圖」</em>。我們會吸引到怎樣的伴侶,往往就是這一格的反映……
+        </p>
+        <div class="entry-foot">
+          <span>2,060 字</span><a href="ziwei-07.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二一 ‧ 九月</span>
+          <span class="entry-num">第 〇 六 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <a href="ziwei-06.html" style="color:inherit"><h2 class="entry-title">命宮:你的人生底色從這裡開始</h2></a>
+        <p class="entry-excerpt">
+          命宮是紫微盤的起點。它的主星、輔星、煞星交織出來的氣質,決定了一個人最基本的<em>性格傾向、處事模式、人生主題</em>。但命宮不是命運判決書——它是底色,後面的十一個宮位才是這幅畫的全貌……
+        </p>
+        <div class="entry-foot">
+          <span>2,000 字</span><a href="ziwei-06.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二〇 ‧ 一月</span>
+          <span class="entry-num">第 〇 五 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <a href="ziwei-05.html" style="color:inherit"><h2 class="entry-title">四化:祿權科忌的真正意義</h2></a>
+        <p class="entry-excerpt">
+          祿、權、科、忌——這四個字是紫微斗數的靈魂。化祿代表「得到」,化權代表「掌握」,化科代表「光彩」,化忌代表「在意」。它們不是好壞二元,而是<em>能量的四種流向</em>……
+        </p>
+        <div class="entry-foot">
+          <span>2,110 字</span><a href="ziwei-05.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">二〇一九 ‧ 八月</span>
+          <span class="entry-num">第 〇 四 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <a href="ziwei-04.html" style="color:inherit"><h2 class="entry-title">三方四正:看命盤不能忽略的格局</h2></a>
+        <p class="entry-excerpt">
+          看紫微盤,從來不是只看一個宮位。<em>三方四正</em>——本宮加上對宮、左右各夾一宮——這四個位置的星辰互相牽動,才構成完整的判斷邏輯。學會看三方四正,才算真正入門紫微……
+        </p>
+        <div class="entry-foot">
+          <span>1,940 字</span><a href="ziwei-04.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">二〇一八 ‧ 五月</span>
+          <span class="entry-num">第 〇 三 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <a href="ziwei-03.html" style="color:inherit"><h2 class="entry-title">十四主星:認識你的命主星</h2></a>
+        <p class="entry-excerpt">
+          紫微斗數有十四顆主星——紫微、天機、太陽、武曲、天同、廉貞、天府、太陰、貪狼、巨門、天相、天梁、七殺、破軍。每一顆主星都有獨特的性格、能量、與適合的人生路徑……
+        </p>
+        <div class="entry-foot">
+          <span>2,170 字</span><a href="ziwei-03.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">二〇一七 ‧ 三月</span>
+          <span class="entry-num">第 〇 二 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <a href="ziwei-02.html" style="color:inherit"><h2 class="entry-title">十二宮位:命盤裡的十二個生命領域</h2></a>
+        <p class="entry-excerpt">
+          紫微盤上的十二宮位——命、兄弟、夫妻、子女、財帛、疾厄、遷移、奴僕、官祿、田宅、福德、父母——是<em>人生的十二個主題</em>。每一宮對應著生命的某一部分,合起來才是完整的一個人……
+        </p>
+        <div class="entry-foot">
+          <span>2,020 字</span><a href="ziwei-02.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">二〇一六 ‧ 七月</span>
+          <span class="entry-num">第 〇 一 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <a href="ziwei-01.html" style="color:inherit"><h2 class="entry-title">紫微斗數的由來與基礎</h2></a>
+        <p class="entry-excerpt">
+          相傳紫微斗數始於宋代陳希夷,以<em>北極紫微星</em>為主軸,結合十四主星與一百多顆輔助星,推演人生格局。它不像八字以「干支五行」為核心,而是以「星辰宮位」為語言——更立體、也更具象……
+        </p>
+        <div class="entry-foot">
+          <span>2,090 字</span><a href="ziwei-01.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+
+      <!-- ============ 風水 FENGSHUI ============ -->
+      <div class="month-divider" id="fengshui" data-cat-marker="fengshui"><span>風 水 ‧ 十 篇<span class="ji">水</span></span></div>
+
+      <article class="entry" data-cat="fengshui">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二五 ‧ 一月</span>
+          <span class="entry-num">第 一〇 則</span>
+          <span class="entry-cat">風水</span>
+        </div>
+        <a href="fengshui-10.html" style="color:inherit"><h2 class="entry-title">風水改造的真實案例:一個家如何被翻轉</h2></a>
+        <p class="entry-excerpt">
+          這幾年看過上百個家。有些家一進門就感覺<em>氣場順</em>,有些家明明裝潢漂亮卻讓人坐立難安。本篇分享一個真實的風水改造故事——從格局調整、家具重排、到色彩重設,一個家如何從「耗氣」變成「養人」……
+        </p>
+        <div class="entry-foot">
+          <span>2,180 字</span><a href="fengshui-10.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="fengshui">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二四 ‧ 八月</span>
+          <span class="entry-num">第 〇 九 則</span>
+          <span class="entry-cat">風水</span>
+        </div>
+        <a href="fengshui-03.html" style="color:inherit"><h2 class="entry-title">客廳是全家氣場的中心,別小看那張沙發的位置</h2></a>
+        <p class="entry-excerpt">
+          客廳這個空間,看似只是大家湊在一起看電視的地方,但從風水的角度來看,它幾乎決定了一個家的<em>氣場基調</em>。沙發朝向、茶几高度、燈光方向、走道流線——每一個細節都在悄悄影響著住在裡面的人……
+        </p>
+        <div class="entry-foot">
+          <span>1,950 字</span><a href="fengshui-03.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="fengshui">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二三 ‧ 五月</span>
+          <span class="entry-num">第 〇 八 則</span>
+          <span class="entry-cat">風水</span>
+        </div>
+        <a href="fengshui-09.html" style="color:inherit"><h2 class="entry-title">風水中的形煞與化解之道</h2></a>
+        <p class="entry-excerpt">
+          天斬煞、壁刀煞、路沖、反弓、屋角煞——這些風水術語聽起來嚇人,但其實它們指的是<em>環境中對人有壓迫感的形體</em>。理解形煞的本質,化解的方法往往比想像中簡單……
+        </p>
+        <div class="entry-foot">
+          <span>2,030 字</span><a href="fengshui-09.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="fengshui">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二二 ‧ 十月</span>
+          <span class="entry-num">第 〇 七 則</span>
+          <span class="entry-cat">風水</span>
+        </div>
+        <a href="fengshui-08.html" style="color:inherit"><h2 class="entry-title">玄關與陽台:氣場流通的兩個關口</h2></a>
+        <p class="entry-excerpt">
+          玄關是「氣口」,陽台是「明堂」。這兩個位置看似邊陲,實際上承擔著<em>整個家氣場的進與出</em>。玄關的整潔程度、陽台的開闊與光照,直接影響家中的能量循環……
+        </p>
+        <div class="entry-foot">
+          <span>1,960 字</span><a href="fengshui-08.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="fengshui">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二一 ‧ 六月</span>
+          <span class="entry-num">第 〇 六 則</span>
+          <span class="entry-cat">風水</span>
+        </div>
+        <a href="fengshui-07.html" style="color:inherit"><h2 class="entry-title">辦公桌風水:職場運的小細節</h2></a>
+        <p class="entry-excerpt">
+          一張辦公桌,坐在上面的位置、桌面的擺設、背後有沒有靠山,都會微妙影響工作運。<em>「坐山望水」是古老的法則</em>,放到現代辦公室裡,依然成立。本篇整理我這些年觀察到的辦公桌風水原則……
+        </p>
+        <div class="entry-foot">
+          <span>2,000 字</span><a href="fengshui-07.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="fengshui">
+        <div class="entry-meta">
+          <span class="entry-date">二〇二〇 ‧ 三月</span>
+          <span class="entry-num">第 〇 五 則</span>
+          <span class="entry-cat">風水</span>
+        </div>
+        <a href="fengshui-06.html" style="color:inherit"><h2 class="entry-title">書房風水:事業與學業的關鍵</h2></a>
+        <p class="entry-excerpt">
+          書房是現代人安頓「思考能量」的空間。它的位置、桌椅朝向、書櫃排列,都會影響<em>專注力、學習效率、靈感流動</em>。本篇從書桌位置、燈光設計、到書櫃選擇,整理書房風水的實用原則……
+        </p>
+        <div class="entry-foot">
+          <span>2,070 字</span><a href="fengshui-06.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="fengshui">
+        <div class="entry-meta">
+          <span class="entry-date">二〇一九 ‧ 十一月</span>
+          <span class="entry-num">第 〇 四 則</span>
+          <span class="entry-cat">風水</span>
+        </div>
+        <a href="fengshui-05.html" style="color:inherit"><h2 class="entry-title">廚房風水:健康與財富的源頭</h2></a>
+        <p class="entry-excerpt">
+          廚房在風水上有兩重意義:它是<em>養命之所(健康)</em>,也是<em>聚財之地(財富)</em>。爐灶位置、水火關係、廚房通風,直接影響家人健康與家庭財運。本篇談談廚房風水的核心原則……
+        </p>
+        <div class="entry-foot">
+          <span>2,040 字</span><a href="fengshui-05.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="fengshui">
+        <div class="entry-meta">
+          <span class="entry-date">二〇一八 ‧ 七月</span>
+          <span class="entry-num">第 〇 三 則</span>
+          <span class="entry-cat">風水</span>
+        </div>
+        <a href="fengshui-04.html" style="color:inherit"><h2 class="entry-title">臥室風水:影響睡眠與感情</h2></a>
+        <p class="entry-excerpt">
+          臥室是人一生中待最久的空間。床的位置、床頭朝向、燈光色溫、鏡子擺放——每一個細節都在影響著<em>睡眠品質與感情狀態</em>。本篇整理我這些年在臥室風水上看過的關鍵原則……
+        </p>
+        <div class="entry-foot">
+          <span>2,120 字</span><a href="fengshui-04.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="fengshui">
+        <div class="entry-meta">
+          <span class="entry-date">二〇一七 ‧ 二月</span>
+          <span class="entry-num">第 〇 二 則</span>
+          <span class="entry-cat">風水</span>
+        </div>
+        <a href="fengshui-02.html" style="color:inherit"><h2 class="entry-title">陽宅三要:門、主、灶</h2></a>
+        <p class="entry-excerpt">
+          古人看陽宅,首重三要——<em>門</em>是氣口,<em>主</em>是房中之主(臥室),<em>灶</em>是養命之源(廚房)。這三個位置一旦定下,整個家的氣場就有了主軸。理解陽宅三要,是學風水最該先掌握的基礎……
+        </p>
+        <div class="entry-foot">
+          <span>2,050 字</span><a href="fengshui-02.html" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="fengshui">
+        <div class="entry-meta">
+          <span class="entry-date">二〇一六 ‧ 五月</span>
+          <span class="entry-num">第 〇 一 則</span>
+          <span class="entry-cat">風水</span>
+        </div>
+        <a href="fengshui-01.html" style="color:inherit"><h2 class="entry-title">風水入門:什麼是真正的風水?</h2></a>
+        <p class="entry-excerpt">
+          風水兩字,被誤解了太久。它不是迷信,也不是玄學,而是<em>「人與環境之間的能量對話」</em>。從巒頭到理氣,從形勢到氣場,風水其實是一門非常古老的「環境心理學」。這篇札記,從最基礎的觀念說起……
+        </p>
+        <div class="entry-foot">
+          <span>2,100 字</span><a href="fengshui-01.html" class="read-more">展開全文 →</a>
         </div>
       </article>
 
     </div>
 
     <div style="text-align:center;margin-top:80px;padding:40px 0;border-top:1px dashed var(--gold-light)">
-      <p style="font-size:13px;letter-spacing:.4em;color:var(--ink-mute);margin-bottom:16px">— 札記首篇 ‧ 共二十則 —</p>
-      <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap">
-        <a href="#" class="filter-pill active" style="border-radius:2px">第 一 卷</a>
-        <a href="#" class="filter-pill" style="border-radius:2px">第 二 卷</a>
-        <a href="#" class="filter-pill" style="border-radius:2px">第 三 卷</a>
-        <a href="#" class="filter-pill" style="border-radius:2px">下一卷 →</a>
-      </div>
+      <p style="font-size:13px;letter-spacing:.4em;color:var(--ink-mute);margin-bottom:16px">— 三十篇札記 ‧ 二〇一六至二〇二五 —</p>
+      <a href="contact.html" class="btn-ghost">讀完想聊聊?寫信給我 →</a>
     </div>
 
   </div>
 </main>
 
-<section class="cta-banner">
-  <h2>讀札記不如親見命盤</h2>
-  <p>真正屬於您的答案,藏在您自己的盤面裡。</p>
-  <a href="booking.html" class="btn-primary">預約一對一諮詢</a>
-</section>
-
 <footer class="footer">
-  <div class="footer-grid">
+  <div class="footer-grid" style="grid-template-columns:2fr 1fr 1fr">
     <div>
       <div class="footer-brand">
         <div class="brand-mark">緣</div>
@@ -419,39 +547,29 @@
           <div class="brand-sub" style="color:#9b9684">SUI YUAN TANG</div>
         </div>
       </div>
-      <p class="footer-desc">以紫微斗數與八字命理為徑,陪伴每一位來訪者梳理命運的脈絡。</p>
+      <p class="footer-desc">一森的命理生活札記。八字、紫微、風水的二十年隨筆。<br/>不販售、不接單、不賣法器,只分享。</p>
     </div>
     <div>
-      <h4>服務項目</h4>
+      <h4>札記分類</h4>
       <ul>
-        <li><a href="services.html#ziwei">紫微斗數</a></li>
-        <li><a href="services.html#bazi">八字論命</a></li>
-        <li><a href="services.html#pair">合婚擇日</a></li>
-        <li><a href="services.html#yearly">流年運勢</a></li>
+        <li><a href="articles.html#bazi">八字</a></li>
+        <li><a href="articles.html#ziwei">紫微斗數</a></li>
+        <li><a href="articles.html#fengshui">風水</a></li>
       </ul>
     </div>
     <div>
-      <h4>關於我們</h4>
+      <h4>連結</h4>
       <ul>
-        <li><a href="about.html">老師簡介</a></li>
+        <li><a href="index.html">首頁</a></li>
         <li><a href="articles.html">命理札記</a></li>
-        <li><a href="contact.html">聯絡資訊</a></li>
-        <li><a href="booking.html">預約諮詢</a></li>
-      </ul>
-    </div>
-    <div>
-      <h4>聯絡方式</h4>
-      <ul>
-        <li>地址:台北市大安區安和路二段</li>
-        <li>電話:02-2700-0000</li>
-        <li>LINE:@suiyuantang</li>
-        <li>信箱:hello@suiyuantang.tw</li>
+        <li><a href="about.html">關於一森</a></li>
+        <li><a href="contact.html">聯絡我們</a></li>
       </ul>
     </div>
   </div>
   <div class="footer-bottom">
     <div>© 2026 隨緣堂 SUI YUAN TANG. All rights reserved.</div>
-    <div>命理為參考之用,人生選擇仍在自己手中。</div>
+    <div>命理為參考,人生選擇仍在自己手中。</div>
   </div>
 </footer>
 
@@ -463,12 +581,8 @@ function filterEntry(el,cat){
     if(cat==='all' || c.dataset.cat===cat){c.style.display='';}else{c.style.display='none';}
   });
   document.querySelectorAll('.month-divider').forEach(m=>{
-    let next=m.nextElementSibling, hasVisible=false;
-    while(next && !next.classList.contains('month-divider')){
-      if(next.classList.contains('entry') && next.style.display!=='none'){hasVisible=true;break;}
-      next=next.nextElementSibling;
-    }
-    m.style.display = hasVisible? '' : 'none';
+    if(cat==='all'){m.style.display='';return}
+    m.style.display = m.dataset.catMarker===cat ? '' : 'none';
   });
 }
 </script>
