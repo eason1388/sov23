@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1.0" />
-<title>命理文章 | 隨緣堂</title>
-<meta name="description" content="紫微斗數、八字命理、流年運勢——隨緣堂的命理隨筆與生活思辨。" />
+<title>命理札記 | 隨緣堂</title>
+<meta name="description" content="隨緣堂的命理札記——紫微、八字、流年、人事的日常隨筆。" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
@@ -25,7 +25,7 @@
       <li><a href="index.html">首頁</a></li>
       <li><a href="services.html">服務項目</a></li>
       <li><a href="about.html">關於老師</a></li>
-      <li><a href="articles.html" class="active">命理文章</a></li>
+      <li><a href="articles.html" class="active">命理札記</a></li>
       <li><a href="booking.html">預約諮詢</a></li>
       <li><a href="contact.html">聯絡我們</a></li>
     </ul>
@@ -39,133 +39,374 @@
   <a href="index.html">首頁</a>
   <a href="services.html">服務項目</a>
   <a href="about.html">關於老師</a>
-  <a href="articles.html">命理文章</a>
+  <a href="articles.html">命理札記</a>
   <a href="booking.html">預約諮詢</a>
   <a href="contact.html">聯絡我們</a>
 </div>
 
-<section class="page-header">
-  <h1>命理文章</h1>
-  <div class="breadcrumb"><a href="index.html">首頁</a><span class="sep">／</span>命理文章</div>
-</section>
+<main class="journal-bg">
+  <div class="journal-wrap">
 
-<section class="section">
-  <div class="container">
-    <div class="articles-filter">
-      <div class="filter-pill active" onclick="filterArticles(this,'all')">全部文章</div>
-      <div class="filter-pill" onclick="filterArticles(this,'ziwei')">紫微斗數</div>
-      <div class="filter-pill" onclick="filterArticles(this,'bazi')">八字命理</div>
-      <div class="filter-pill" onclick="filterArticles(this,'yearly')">流年運勢</div>
-      <div class="filter-pill" onclick="filterArticles(this,'love')">情感命理</div>
-      <div class="filter-pill" onclick="filterArticles(this,'life')">命理生活</div>
+    <div class="journal-intro">
+      <div class="stamp">緣</div>
+      <div class="sub">SUI YUAN ‧ NOTEBOOK</div>
+      <h1>命理札記</h1>
+      <p class="preface">
+        命盤如紙,人生如墨。<br/>
+        這裡是我多年論命之餘,隨手記下的觀察與思索。<br/>
+        沒有絕對的答案,只有願意陪您一起想想的句子。
+      </p>
     </div>
 
-    <div class="article-grid" id="articleGrid">
-      <article class="article-card" data-cat="ziwei">
-        <div class="article-cover">紫</div>
-        <div class="article-body">
-          <span class="article-tag">紫微斗數</span>
-          <h3>命宮的星辰,決定一生的底色?</h3>
-          <p>命宮主星往往被視為性格基調,但真正影響一生走向的,還包括三方四正的星辰互動。本文從基礎出發,帶您理解命宮的真實意義。</p>
-          <div class="article-meta">2026.04.18 ‧ 5 分鐘閱讀</div>
-        </div>
-      </article>
-
-      <article class="article-card" data-cat="yearly">
-        <div class="article-cover">運</div>
-        <div class="article-body">
-          <span class="article-tag">流年運勢</span>
-          <h3>2026 丙午年:火氣旺盛之年的進退取捨</h3>
-          <p>丙午為陽火坐火,整體年運偏向積極外擴,但容易躁進。本文整理十二生肖在此年的留意之處與機會點。</p>
-          <div class="article-meta">2026.03.05 ‧ 8 分鐘閱讀</div>
-        </div>
-      </article>
-
-      <article class="article-card" data-cat="love">
-        <div class="article-cover">緣</div>
-        <div class="article-body">
-          <span class="article-tag">情感命理</span>
-          <h3>夫妻宮的化忌,真的代表婚姻不順嗎?</h3>
-          <p>許多人看到夫妻宮有化忌就心驚,其實化忌也代表「在意」與「投入」。理解它的雙面性,才是命理的智慧。</p>
-          <div class="article-meta">2026.02.14 ‧ 6 分鐘閱讀</div>
-        </div>
-      </article>
-
-      <article class="article-card" data-cat="bazi">
-        <div class="article-cover">八</div>
-        <div class="article-body">
-          <span class="article-tag">八字命理</span>
-          <h3>日主強弱怎麼看?五分鐘理解八字基本盤</h3>
-          <p>日主代表「自己」,日主的強弱決定您命局中的喜忌方向。本文以最簡單的方式拆解日主強弱判斷的核心原則。</p>
-          <div class="article-meta">2026.01.22 ‧ 7 分鐘閱讀</div>
-        </div>
-      </article>
-
-      <article class="article-card" data-cat="ziwei">
-        <div class="article-cover">財</div>
-        <div class="article-body">
-          <span class="article-tag">紫微斗數</span>
-          <h3>財帛宮空宮,代表沒錢嗎?</h3>
-          <p>命盤上看到財帛宮「空宮」常讓人緊張,其實空宮自有其妙用。理解空宮借星的邏輯,才能真正解讀財運走勢。</p>
-          <div class="article-meta">2025.12.30 ‧ 5 分鐘閱讀</div>
-        </div>
-      </article>
-
-      <article class="article-card" data-cat="life">
-        <div class="article-cover">心</div>
-        <div class="article-body">
-          <span class="article-tag">命理生活</span>
-          <h3>當命理遇到心理學:看清自己,才是改變的起點</h3>
-          <p>命理不只是預測未來的工具,更是一面照見自己的鏡子。當我們願意誠實面對盤面,改變才有可能發生。</p>
-          <div class="article-meta">2025.12.10 ‧ 6 分鐘閱讀</div>
-        </div>
-      </article>
-
-      <article class="article-card" data-cat="bazi">
-        <div class="article-cover">用</div>
-        <div class="article-body">
-          <span class="article-tag">八字命理</span>
-          <h3>什麼是「用神」?它真的能改變命運嗎?</h3>
-          <p>用神是八字命理中最關鍵的概念之一。本文從基礎到實務,帶您理解用神如何運作,以及它對日常選擇的影響。</p>
-          <div class="article-meta">2025.11.18 ‧ 9 分鐘閱讀</div>
-        </div>
-      </article>
-
-      <article class="article-card" data-cat="love">
-        <div class="article-cover">合</div>
-        <div class="article-body">
-          <span class="article-tag">情感命理</span>
-          <h3>合婚迷思:八字「合」就一定幸福嗎?</h3>
-          <p>八字相合不等於白頭偕老,八字看起來不合也未必走不遠。婚姻的長度,從來不只看一張紙面上的格局。</p>
-          <div class="article-meta">2025.10.28 ‧ 7 分鐘閱讀</div>
-        </div>
-      </article>
-
-      <article class="article-card" data-cat="yearly">
-        <div class="article-cover">節</div>
-        <div class="article-body">
-          <span class="article-tag">流年運勢</span>
-          <h3>立春才是新的一年開始?談八字流年的真正起點</h3>
-          <p>許多人以為農曆春節就是新一年的命理起點,其實八字流年是以「立春」為界。理解這個細節,才不會推錯運勢。</p>
-          <div class="article-meta">2025.10.05 ‧ 5 分鐘閱讀</div>
-        </div>
-      </article>
+    <div class="journal-cats">
+      <div class="journal-cat active" onclick="filterEntry(this,'all')">全部</div>
+      <div class="journal-cat" onclick="filterEntry(this,'ziwei')">紫微</div>
+      <div class="journal-cat" onclick="filterEntry(this,'bazi')">八字</div>
+      <div class="journal-cat" onclick="filterEntry(this,'yearly')">流年</div>
+      <div class="journal-cat" onclick="filterEntry(this,'love')">情感</div>
+      <div class="journal-cat" onclick="filterEntry(this,'life')">命理生活</div>
+      <div class="journal-cat" onclick="filterEntry(this,'season')">節氣隨筆</div>
     </div>
 
-    <!-- Pagination dummy -->
-    <div style="display:flex;justify-content:center;gap:8px;margin-top:64px">
-      <a href="#" class="filter-pill active" style="border-radius:2px">1</a>
-      <a href="#" class="filter-pill" style="border-radius:2px">2</a>
-      <a href="#" class="filter-pill" style="border-radius:2px">3</a>
-      <a href="#" class="filter-pill" style="border-radius:2px">下一頁 →</a>
+    <div id="entries">
+
+      <div class="month-divider"><span>二〇二六 ‧ 春<span class="ji">春</span></span></div>
+
+      <article class="entry" data-cat="yearly">
+        <div class="entry-meta">
+          <span class="entry-date">穀雨 ‧ 四月二十</span>
+          <span class="entry-num">第 二〇 則</span>
+          <span class="entry-cat">流年</span>
+        </div>
+        <h2 class="entry-title">立夏將至,六月會是個躁動的月份</h2>
+        <p class="entry-excerpt">
+          每年從穀雨走進立夏,空氣裡的濕度先升,然後是溫度。今年丙午年走到午月,等於<em>火氣疊火氣</em>,人心容易跟著浮動。最近諮詢的客人,話題反覆繞著「想換工作」「想離開現有關係」這幾個方向,並非巧合。火主動、主衝,衝得太急,反而看不清方向。
+        </p>
+        <p class="entry-pull">「動之前,先問問自己:是逃避,還是真正想往哪裡去?」</p>
+        <div class="entry-foot">
+          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">清明 ‧ 四月七</span>
+          <span class="entry-num">第 一九 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <h2 class="entry-title">命宮的星辰,決定一生的底色?</h2>
+        <p class="entry-excerpt">
+          有人來諮詢,劈頭就問:「老師,我命宮是貪狼,是不是注定花心?」我聽了笑出來。命宮主星確實是最直接的性格基調,但它從來不是<em>「決定」</em>,而是<em>「傾向」</em>。同樣一顆貪狼,有人成為熱情的企劃,有人成為深情的廚師,差別在於三方四正的拉扯,以及這個人有沒有意識去調整自己。
+        </p>
+        <div class="entry-foot">
+          <span>6 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="life">
+        <div class="entry-meta">
+          <span class="entry-date">春分 ‧ 三月二十</span>
+          <span class="entry-num">第 一八 則</span>
+          <span class="entry-cat">命理生活</span>
+        </div>
+        <h2 class="entry-title">為什麼有些人「越算越亂」?</h2>
+        <p class="entry-excerpt">
+          一位老客人坦白告訴我,她過去三年找過七位老師,每一次論命結束都覺得很有道理,但回家後反而更焦慮。我聽了之後直接說:那妳該停的,不是再找下一位老師,而是<em>停下來面對自己</em>。命理工具本身沒問題,問題是把它當成「逃避自己」的方法。當答案被外人說出口,你的人生就不再屬於你。
+        </p>
+        <p class="entry-pull">「命理是鏡子,不是處方箋。」</p>
+        <div class="entry-foot">
+          <span>7 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="yearly">
+        <div class="entry-meta">
+          <span class="entry-date">驚蟄 ‧ 三月五</span>
+          <span class="entry-num">第 一七 則</span>
+          <span class="entry-cat">流年</span>
+        </div>
+        <h2 class="entry-title">2026 丙午年:火氣旺盛之年的進退取捨</h2>
+        <p class="entry-excerpt">
+          丙午是<em>陽火坐午火</em>,等於太陽掛在正中天。這種年份的人事氣氛通常是「明亮、外擴、節奏快」,但也最容易因為熱情過頭而失了分寸。生肖屬鼠的朋友今年沖太歲,並非要恐慌,而是請把節奏放慢一格;屬馬的朋友本命年,反而要避免「為了動而動」。整體來說,丙午年適合<em>表達</em>,不適合<em>衝撞</em>。
+        </p>
+        <div class="entry-foot">
+          <span>8 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="love">
+        <div class="entry-meta">
+          <span class="entry-date">雨水 ‧ 二月十九</span>
+          <span class="entry-num">第 一六 則</span>
+          <span class="entry-cat">情感</span>
+        </div>
+        <h2 class="entry-title">夫妻宮的化忌,真的代表婚姻不順嗎?</h2>
+        <p class="entry-excerpt">
+          「化忌」這個詞聽起來很重,所以很多人一看到夫妻宮有化忌就心神不寧。但其實在命理語言裡,化忌的本質是<em>「在意」</em>。一個人對某個宮位投入越多執著,那一格就容易出現化忌。夫妻宮化忌的人,不是注定關係不順,而是「會把伴侶看得很重」——這份重,可以是甜的,也可以是壓力。差別在彼此能不能共同消化。
+        </p>
+        <p class="entry-pull">「在意,從來都是雙面刃。」</p>
+        <div class="entry-foot">
+          <span>6 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <div class="month-divider"><span>二〇二六 ‧ 立春之前<span class="ji">寒</span></span></div>
+
+      <article class="entry" data-cat="season">
+        <div class="entry-meta">
+          <span class="entry-date">立春 ‧ 二月四</span>
+          <span class="entry-num">第 一五 則</span>
+          <span class="entry-cat">節氣</span>
+        </div>
+        <h2 class="entry-title">立春才是新的一年開始,談八字流年的真正起點</h2>
+        <p class="entry-excerpt">
+          每年農曆春節前後,常有客人問:「老師,我已經過完年,是不是要看新的流年了?」其實不是。八字命理以<em>節氣</em>為界,新年起算於「立春」這一刻——通常落在國曆二月三日或四日。理解這個細節並不只是知識,它讓我們對「換運」這件事有更精準的時間感:不是看煙火,而是看陽氣何時真的回來。
+        </p>
+        <div class="entry-foot">
+          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="bazi">
+        <div class="entry-meta">
+          <span class="entry-date">大寒 ‧ 一月二十</span>
+          <span class="entry-num">第 一四 則</span>
+          <span class="entry-cat">八字</span>
+        </div>
+        <h2 class="entry-title">日主強弱怎麼看?五分鐘理解八字基本盤</h2>
+        <p class="entry-excerpt">
+          日主就是出生那一天的天干,代表「自己」。判斷日主強弱有幾個基本層次:得令(出生月份是否生扶日主)、得地(地支是否藏著本氣)、得勢(天干地支是否多印多比)。這三個條件越多,日主越強;反之則弱。但<em>強不等於好,弱不等於壞</em>——強日主需要洩,弱日主需要扶,真正的關鍵在「平衡」二字。
+        </p>
+        <div class="entry-foot">
+          <span>7 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">小寒 ‧ 一月五</span>
+          <span class="entry-num">第 一三 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <h2 class="entry-title">財帛宮空宮,代表沒錢嗎?</h2>
+        <p class="entry-excerpt">
+          紫微盤上看到財帛宮「空宮」,大部分人會直覺反應:糟了,這代表沒財運嗎?其實不然。空宮會「借對宮」的星辰來看,這在古書裡稱為<em>「借星安宮」</em>。一個財帛空宮借了夫妻宮巨門天同的人,財運往往跟感情、家庭氣氛緊密相關;借了官祿宮太陽天梁的人,則可能透過事業地位來賺錢。空宮並不是空,而是<em>需要放眼更遠的地方</em>。
+        </p>
+        <p class="entry-pull">「空,是另一種看見。」</p>
+        <div class="entry-foot">
+          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <div class="month-divider"><span>二〇二五 ‧ 冬<span class="ji">藏</span></span></div>
+
+      <article class="entry" data-cat="life">
+        <div class="entry-meta">
+          <span class="entry-date">冬至 ‧ 十二月二十二</span>
+          <span class="entry-num">第 一二 則</span>
+          <span class="entry-cat">命理生活</span>
+        </div>
+        <h2 class="entry-title">當命理遇到心理學:看清自己,才是改變的起點</h2>
+        <p class="entry-excerpt">
+          命理跟心理學乍看似乎兩個世界,但真正讓兩者交會的,是對「人」的關心。命盤指出一個人可能的反應模式,心理學則告訴我們<em>為什麼會這樣反應</em>。當我幫客人解盤時,常常會引用一些心理學的語言,讓抽象的「化忌」「擎羊」變成可以日常實踐的覺察。命理不是用來預測命運的占卜術,而是讓我們看清自己,然後才有「不一樣」的可能。
+        </p>
+        <div class="entry-foot">
+          <span>6 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="bazi">
+        <div class="entry-meta">
+          <span class="entry-date">大雪 ‧ 十二月七</span>
+          <span class="entry-num">第 一一 則</span>
+          <span class="entry-cat">八字</span>
+        </div>
+        <h2 class="entry-title">什麼是「用神」?它真的能改變命運嗎?</h2>
+        <p class="entry-excerpt">
+          用神是八字裡最被誤解的概念之一。很多人以為「找到用神」就能改運,把它想得像萬靈丹。但用神的本意只是<em>「命局中能讓五行流動起來的那一個元素」</em>。它能讓你過得比較舒服,但不會把一塊岩石變成黃金。理解用神,是學會怎麼讓自己更輕鬆地活在自己的命格裡——這才是用神真正的意義。
+        </p>
+        <div class="entry-foot">
+          <span>9 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">小雪 ‧ 十一月二十二</span>
+          <span class="entry-num">第 一〇 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <h2 class="entry-title">化祿不是天上掉下來的禮物</h2>
+        <p class="entry-excerpt">
+          化祿在紫微裡常被當作「好運」的代名詞,但仔細看就會發現:化祿是<em>「投入」與「累積」</em>的果實。哪一宮化祿,哪一宮就是你願意花時間經營的地方。某顆星沒有化祿,不代表那一塊註定貧瘠,只代表你沒有把心力放在那裡。所以,看到別人盤上化祿不要羨慕——他可能也羨慕著你盤上那顆,你卻從來沒在意過的星。
+        </p>
+        <p class="entry-pull">「祿是耕耘的回報,不是恩賜。」</p>
+        <div class="entry-foot">
+          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="love">
+        <div class="entry-meta">
+          <span class="entry-date">立冬 ‧ 十一月七</span>
+          <span class="entry-num">第 〇 九 則</span>
+          <span class="entry-cat">情感</span>
+        </div>
+        <h2 class="entry-title">合婚迷思:八字「合」就一定幸福嗎?</h2>
+        <p class="entry-excerpt">
+          常有人在婚禮前一週急著找我合婚,我都說太晚了——但又不是來阻止的,是來提醒。八字相合代表雙方<em>能量上互相滋養</em>,但婚姻是「日復一日的選擇」,沒有任何八字會自動讓人選擇善待對方。我看過八字看似衝突卻相伴半生的夫妻,也看過八字完美卻三年內離異的伴侶。差別不在紙上,而在每天起床後願不願意再對對方溫柔一次。
+        </p>
+        <div class="entry-foot">
+          <span>7 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <div class="month-divider"><span>二〇二五 ‧ 秋<span class="ji">收</span></span></div>
+
+      <article class="entry" data-cat="life">
+        <div class="entry-meta">
+          <span class="entry-date">霜降 ‧ 十月二十三</span>
+          <span class="entry-num">第 〇 八 則</span>
+          <span class="entry-cat">命理生活</span>
+        </div>
+        <h2 class="entry-title">關於改名,我想說的幾件事</h2>
+        <p class="entry-excerpt">
+          改名是個常見的話題。我必須誠實說:改名能改變的東西,比大部分人想像的小很多。<em>名字會影響社交印象、頻率、自我認同</em>,但它無法逆轉命格本質。我不反對改名,但我反對「以為改了名一切就會好起來」。真正改變人生的,從來都不是兩個字,而是<em>每天做出的微小選擇</em>。
+        </p>
+        <div class="entry-foot">
+          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">寒露 ‧ 十月八</span>
+          <span class="entry-num">第 〇 七 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <h2 class="entry-title">擎羊在福德宮,不是凶,是執著</h2>
+        <p class="entry-excerpt">
+          擎羊是把刀,進到福德宮聽起來嚇人,但仔細看會發現,擎羊在福德宮的人,大多很有<em>主見、堅持、不輕易妥協</em>。他們的人生關鍵字不是「享受」,而是「完成」。痛苦的時候不是因為命差,而是因為他們不允許自己隨便算了。這不是壞事——只是需要學會,有時候放下也是一種勝利。
+        </p>
+        <div class="entry-foot">
+          <span>6 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="season">
+        <div class="entry-meta">
+          <span class="entry-date">秋分 ‧ 九月二十三</span>
+          <span class="entry-num">第 〇 六 則</span>
+          <span class="entry-cat">節氣</span>
+        </div>
+        <h2 class="entry-title">陰陽相平的這一天,適合放下一些什麼</h2>
+        <p class="entry-excerpt">
+          秋分是一年裡少數陰陽完全平衡的節氣之一。中醫講「秋主收」,人應該開始把外散的能量收回來,睡眠多一點、脾氣慢一點、計畫少一點。從命理角度看,這也是適合<em>放下執著</em>的時節——上半年沒做成的事,不必硬撐;下半年開始的事,不必急著開花。陰陽要平衡,人也是。
+        </p>
+        <p class="entry-pull">「秋分過後,我們學著不再用力。」</p>
+        <div class="entry-foot">
+          <span>4 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="bazi">
+        <div class="entry-meta">
+          <span class="entry-date">白露 ‧ 九月八</span>
+          <span class="entry-num">第 〇 五 則</span>
+          <span class="entry-cat">八字</span>
+        </div>
+        <h2 class="entry-title">「身弱」不是體弱,而是命局結構薄</h2>
+        <p class="entry-excerpt">
+          很多人聽到自己「身弱」就以為是健康差,其實八字裡的「身弱」是指<em>日主在命局中沒有得到足夠的支撐</em>。身弱的人不見得體弱,但他們確實比較容易被環境影響、容易委屈、容易把自己擺到後面。這樣的人格不是缺陷,而是需要學會「先把自己放到桌面上」。命理只是告訴你起跑點,跑哪裡是自己的事。
+        </p>
+        <div class="entry-foot">
+          <span>6 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <div class="month-divider"><span>二〇二五 ‧ 夏<span class="ji">長</span></span></div>
+
+      <article class="entry" data-cat="love">
+        <div class="entry-meta">
+          <span class="entry-date">處暑 ‧ 八月二十三</span>
+          <span class="entry-num">第 〇 四 則</span>
+          <span class="entry-cat">情感</span>
+        </div>
+        <h2 class="entry-title">桃花年:那不是叫你急著找對象</h2>
+        <p class="entry-excerpt">
+          客人最常問的問題之一是:「老師,我今年有桃花嗎?」我每次都先反問:你想要的是什麼樣的桃花?<em>有些桃花是來陪伴你的,有些是來提醒你的</em>,還有些只是讓你看清自己一直以來在感情裡的盲點。桃花年最忌諱「為了證明自己有人要」而隨便進入關係——那是把好運用來懲罰自己。
+        </p>
+        <div class="entry-foot">
+          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="ziwei">
+        <div class="entry-meta">
+          <span class="entry-date">立秋 ‧ 八月七</span>
+          <span class="entry-num">第 〇 三 則</span>
+          <span class="entry-cat">紫微</span>
+        </div>
+        <h2 class="entry-title">紫微入命,真的就是「帝王命」嗎?</h2>
+        <p class="entry-excerpt">
+          紫微星進命宮的人,常被簡單貼上「帝王命」「天生領袖」的標籤,但實際諮詢過幾百位紫微坐命的客人,我發現他們比較常見的特質是<em>「孤」</em>。不是孤獨,而是「不太能完全依賴別人」。紫微星帶著一種隱性的責任感,讓他們無論在哪都會不自覺站到前面去。這是天賦,也是<em>需要學會放鬆的功課</em>。
+        </p>
+        <p class="entry-pull">「皇帝最累的,從來不是治國,是不能被理解。」</p>
+        <div class="entry-foot">
+          <span>7 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="life">
+        <div class="entry-meta">
+          <span class="entry-date">大暑 ‧ 七月二十三</span>
+          <span class="entry-num">第 〇 二 則</span>
+          <span class="entry-cat">命理生活</span>
+        </div>
+        <h2 class="entry-title">為什麼我不販售改運法器</h2>
+        <p class="entry-excerpt">
+          有人來諮詢時直接問:「老師,你這裡有沒有什麼可以買的補運品?」我都老實說沒有。<em>真正能改運的不是石頭、不是符紙,是你對自己的覺察與選擇</em>。我不是說那些東西完全沒效——它們可以給人安心感,而安心本身就有力量——但我不願意當那個利用恐懼賺錢的人。命理應該幫人站起來,而不是讓人離不開老師的口袋。
+        </p>
+        <div class="entry-foot">
+          <span>5 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
+      <article class="entry" data-cat="bazi">
+        <div class="entry-meta">
+          <span class="entry-date">小暑 ‧ 七月七</span>
+          <span class="entry-num">第 〇 一 則</span>
+          <span class="entry-cat">八字</span>
+        </div>
+        <h2 class="entry-title">寫在第一則札記之前</h2>
+        <p class="entry-excerpt">
+          習命將近二十年,從來沒想過會把這些細碎的觀察寫下來。直到有一天,一位客人離開時對我說:「老師,我聽你講的這些,如果有寫下來就好了,我不見得當下都記得住。」於是有了這本札記。它不打算系統化、不打算當教科書,只是一個老命理人在多年看人之後,願意誠實寫下的<em>那些靠近真實的句子</em>。
+        </p>
+        <p class="entry-pull">「願這些字,陪您在迷茫時,慢慢呼吸。」</p>
+        <div class="entry-foot">
+          <span>3 分鐘閱讀</span><a href="#" class="read-more">展開全文 →</a>
+        </div>
+      </article>
+
     </div>
+
+    <div style="text-align:center;margin-top:80px;padding:40px 0;border-top:1px dashed var(--gold-light)">
+      <p style="font-size:13px;letter-spacing:.4em;color:var(--ink-mute);margin-bottom:16px">— 札記首篇 ‧ 共二十則 —</p>
+      <div style="display:flex;justify-content:center;gap:14px;flex-wrap:wrap">
+        <a href="#" class="filter-pill active" style="border-radius:2px">第 一 卷</a>
+        <a href="#" class="filter-pill" style="border-radius:2px">第 二 卷</a>
+        <a href="#" class="filter-pill" style="border-radius:2px">第 三 卷</a>
+        <a href="#" class="filter-pill" style="border-radius:2px">下一卷 →</a>
+      </div>
+    </div>
+
   </div>
-</section>
+</main>
 
 <section class="cta-banner">
-  <h2>讀文不如親盤一見</h2>
-  <p>真正屬於您的命理答案,藏在您自己的命盤裡。</p>
-  <a href="booking.html" class="btn-primary">預約專屬命盤諮詢</a>
+  <h2>讀札記不如親見命盤</h2>
+  <p>真正屬於您的答案,藏在您自己的盤面裡。</p>
+  <a href="booking.html" class="btn-primary">預約一對一諮詢</a>
 </section>
 
 <footer class="footer">
@@ -193,7 +434,7 @@
       <h4>關於我們</h4>
       <ul>
         <li><a href="about.html">老師簡介</a></li>
-        <li><a href="articles.html">命理文章</a></li>
+        <li><a href="articles.html">命理札記</a></li>
         <li><a href="contact.html">聯絡資訊</a></li>
         <li><a href="booking.html">預約諮詢</a></li>
       </ul>
@@ -215,11 +456,19 @@
 </footer>
 
 <script>
-function filterArticles(el,cat){
-  document.querySelectorAll('.filter-pill').forEach(p=>p.classList.remove('active'));
+function filterEntry(el,cat){
+  document.querySelectorAll('.journal-cat').forEach(p=>p.classList.remove('active'));
   el.classList.add('active');
-  document.querySelectorAll('#articleGrid .article-card').forEach(c=>{
+  document.querySelectorAll('#entries .entry').forEach(c=>{
     if(cat==='all' || c.dataset.cat===cat){c.style.display='';}else{c.style.display='none';}
+  });
+  document.querySelectorAll('.month-divider').forEach(m=>{
+    let next=m.nextElementSibling, hasVisible=false;
+    while(next && !next.classList.contains('month-divider')){
+      if(next.classList.contains('entry') && next.style.display!=='none'){hasVisible=true;break;}
+      next=next.nextElementSibling;
+    }
+    m.style.display = hasVisible? '' : 'none';
   });
 }
 </script>

@@ -500,3 +500,175 @@ img{max-width:100%;display:block}
   position:absolute;top:24px;right:24px;background:none;
   border:none;font-size:30px;cursor:pointer;color:var(--ink);
 }
+
+/* ====================================================
+   札記 Journal Styles —— 命理文章札記式排版
+   ==================================================== */
+.journal-bg{
+  background:
+    radial-gradient(ellipse at top, rgba(201,169,97,.05), transparent 50%),
+    repeating-linear-gradient(
+      to bottom,
+      transparent 0,
+      transparent 38px,
+      rgba(201,169,97,.04) 38px,
+      rgba(201,169,97,.04) 39px
+    ),
+    #fbf8f1;
+}
+
+.journal-wrap{
+  max-width:780px;margin:0 auto;padding:60px 20px;
+}
+
+.journal-intro{
+  text-align:center;padding:40px 20px 60px;
+  border-bottom:1px solid var(--gold-light);
+  margin-bottom:60px;
+}
+.journal-intro .stamp{
+  display:inline-block;
+  font-family:"Noto Serif TC",serif;
+  font-size:48px;color:var(--gold-dark);
+  letter-spacing:.1em;
+  border:1px solid var(--gold);
+  padding:14px 22px;border-radius:2px;
+  margin-bottom:24px;background:#fff;
+  transform:rotate(-3deg);
+}
+.journal-intro h1{
+  font-family:"Noto Serif TC",serif;
+  font-size:36px;letter-spacing:.3em;
+  margin-bottom:16px;color:var(--ink);
+}
+.journal-intro .sub{
+  font-size:14px;letter-spacing:.3em;color:var(--gold-dark);
+  margin-bottom:18px;
+}
+.journal-intro .preface{
+  font-size:15px;color:var(--ink-soft);max-width:520px;
+  margin:0 auto;line-height:2;letter-spacing:.05em;
+  font-style:italic;
+}
+
+.journal-cats{
+  display:flex;justify-content:center;gap:6px;flex-wrap:wrap;
+  margin-bottom:48px;padding-bottom:24px;
+  border-bottom:1px dashed var(--gold-light);
+}
+.journal-cat{
+  padding:6px 18px;font-size:13px;letter-spacing:.2em;
+  color:var(--ink-soft);cursor:pointer;
+  border-bottom:2px solid transparent;
+  transition:all .25s ease;
+}
+.journal-cat.active,.journal-cat:hover{
+  color:var(--gold-dark);border-bottom-color:var(--gold);
+}
+
+.entry{
+  padding:48px 0 40px;
+  border-bottom:1px dashed var(--gold-light);
+  position:relative;
+}
+.entry:last-child{border-bottom:none}
+
+.entry-meta{
+  display:flex;align-items:baseline;gap:24px;
+  margin-bottom:18px;flex-wrap:wrap;
+}
+.entry-date{
+  font-family:"Noto Serif TC",serif;
+  font-size:15px;color:var(--gold-dark);
+  letter-spacing:.2em;
+  position:relative;padding-left:24px;
+}
+.entry-date::before{
+  content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:14px;height:1px;background:var(--gold);
+}
+.entry-num{
+  font-family:"Noto Serif TC",serif;
+  font-size:13px;color:var(--ink-mute);
+  letter-spacing:.3em;
+}
+.entry-cat{
+  font-size:12px;color:var(--gold-dark);
+  letter-spacing:.3em;
+  padding:2px 12px;border:1px solid var(--gold-light);
+  border-radius:2px;background:rgba(255,255,255,.5);
+}
+
+.entry-title{
+  font-family:"Noto Serif TC",serif;
+  font-size:26px;letter-spacing:.12em;
+  margin-bottom:18px;line-height:1.7;
+  color:var(--ink);font-weight:500;
+  position:relative;
+}
+.entry-title:hover{color:var(--gold-dark)}
+.entry-title::first-letter{
+  color:var(--gold-dark);font-size:1.15em;
+}
+
+.entry-excerpt{
+  font-size:15.5px;line-height:2;color:var(--ink-soft);
+  letter-spacing:.04em;margin-bottom:18px;
+  text-indent:2em;
+}
+.entry-excerpt em{
+  color:var(--gold-dark);font-style:normal;
+  border-bottom:1px dotted var(--gold);padding-bottom:1px;
+}
+
+.entry-foot{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-top:14px;font-size:13px;color:var(--ink-mute);
+  letter-spacing:.15em;
+}
+.entry-foot .read-more{
+  color:var(--gold-dark);font-size:13px;letter-spacing:.25em;
+  border-bottom:1px solid var(--gold-light);padding-bottom:2px;
+}
+.entry-foot .read-more:hover{border-bottom-color:var(--gold-dark)}
+
+.month-divider{
+  text-align:center;margin:60px 0 30px;
+  font-family:"Noto Serif TC",serif;
+  letter-spacing:.4em;color:var(--ink-mute);font-size:14px;
+  position:relative;
+}
+.month-divider span{
+  background:#fbf8f1;padding:0 24px;position:relative;z-index:1;
+}
+.month-divider::before{
+  content:"";position:absolute;top:50%;left:0;right:0;
+  height:1px;background:var(--gold-light);
+}
+.month-divider .ji{
+  display:inline-block;
+  font-size:22px;color:var(--gold-dark);
+  margin:0 12px;letter-spacing:0;
+}
+
+.entry-pull{
+  margin:18px 0;padding:14px 22px;
+  border-left:2px solid var(--gold);
+  background:rgba(201,169,97,.04);
+  font-family:"Noto Serif TC",serif;
+  font-size:15px;color:var(--gold-dark);
+  letter-spacing:.1em;line-height:1.9;
+}
+
+.side-note{
+  font-size:12px;color:var(--ink-mute);
+  letter-spacing:.2em;font-style:italic;
+  margin-top:8px;
+}
+
+@media (max-width:720px){
+  .journal-intro h1{font-size:26px;letter-spacing:.2em}
+  .entry-title{font-size:21px;letter-spacing:.08em}
+  .entry-excerpt{font-size:15px}
+  .journal-wrap{padding:40px 16px}
+}
