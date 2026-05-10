@@ -7,7 +7,7 @@
 <meta name="description" content="隨緣堂——一森的命理生活札記。八字、紫微斗數、風水的二十年隨筆。" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -39,20 +39,76 @@
   <a href="contact.html">聯絡我們</a>
 </div>
 
+<!-- ============ HERO (大氣升級版) ============ -->
 <section class="hero">
-  <div class="hero-eyebrow">SUI YUAN TANG ‧ 隨 緣 而 安</div>
-  <h1>命有<span class="accent">定</span>數 ‧ 心有<span class="accent">所</span>歸</h1>
-  <p class="hero-tagline">
-    這裡沒有販售任何服務,沒有收費項目。<br/>
-    只是一個習命二十多年的人,把走過的人事與盤面,寫成隨手的札記。<br/>
-    如果某一句話正好對上您的心境,那就是緣分。
-  </p>
-  <div class="hero-cta">
-    <a href="articles.html" class="btn-primary">翻閱命理札記 →</a>
-    <a href="about.html" class="btn-ghost">關於一森</a>
+  <!-- 背景星象 SVG 裝飾 -->
+  <div class="hero-stars" aria-hidden="true">
+    <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
+      <defs>
+        <radialGradient id="starGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#c4a35a" stop-opacity=".9"/>
+          <stop offset="100%" stop-color="#c4a35a" stop-opacity="0"/>
+        </radialGradient>
+        <radialGradient id="lavGlow" cx="50%" cy="50%" r="50%">
+          <stop offset="0%" stop-color="#a99cc4" stop-opacity=".7"/>
+          <stop offset="100%" stop-color="#a99cc4" stop-opacity="0"/>
+        </radialGradient>
+      </defs>
+      <!-- 大型星雲光暈 -->
+      <circle cx="180" cy="200" r="120" fill="url(#lavGlow)" opacity=".55"/>
+      <circle cx="1020" cy="620" r="140" fill="url(#starGlow)" opacity=".35"/>
+      <circle cx="950" cy="160" r="80" fill="url(#lavGlow)" opacity=".45"/>
+
+      <!-- 點點繁星 (twinkle 動畫) -->
+      <g fill="#8a6f2c">
+        <circle class="twinkle" cx="120" cy="120" r="1.8"/>
+        <circle class="twinkle" cx="280" cy="80"  r="1.2"/>
+        <circle class="twinkle" cx="450" cy="160" r="1.5"/>
+        <circle class="twinkle" cx="640" cy="90"  r="2"/>
+        <circle class="twinkle" cx="820" cy="220" r="1.4"/>
+        <circle class="twinkle" cx="1080" cy="100" r="1.8"/>
+        <circle class="twinkle" cx="1140" cy="320" r="1.3"/>
+      </g>
+      <g fill="#6e5e8a">
+        <circle class="twinkle" cx="60"  cy="540" r="1.4"/>
+        <circle class="twinkle" cx="240" cy="660" r="1.8"/>
+        <circle class="twinkle" cx="380" cy="720" r="1.2"/>
+        <circle class="twinkle" cx="680" cy="640" r="1.6"/>
+        <circle class="twinkle" cx="900" cy="700" r="1.4"/>
+        <circle class="twinkle" cx="1100" cy="540" r="2"/>
+      </g>
+
+      <!-- 細線連起來的星座意象 -->
+      <g stroke="#c4a35a" stroke-width=".6" fill="none" opacity=".35">
+        <path d="M 120 120 L 280 80 L 450 160 L 640 90"/>
+        <path d="M 820 220 L 1080 100 L 1140 320"/>
+        <path d="M 60 540 L 240 660 L 380 720"/>
+      </g>
+
+      <!-- 一彎月牙 -->
+      <g transform="translate(1050,420)">
+        <circle r="38" fill="#faf5e9" opacity=".55"/>
+        <circle r="38" cx="14" fill="#fdfbf6" opacity="1"/>
+      </g>
+    </svg>
+  </div>
+
+  <div class="hero-inner">
+    <div class="hero-eyebrow">SUI YUAN TANG ‧ 隨 緣 而 安</div>
+    <h1>命有<span class="accent">定</span>數 ‧ 心有<span class="accent">所</span>歸</h1>
+    <p class="hero-tagline">
+      這裡沒有販售任何服務,沒有收費項目。<br/>
+      只是一個習命二十多年的人,把走過的人事與盤面,寫成隨手的札記。<br/>
+      如果某一句話正好對上您的心境,那就是緣分。
+    </p>
+    <div class="hero-cta">
+      <a href="articles.html" class="btn-primary">翻閱命理札記 →</a>
+      <a href="about.html" class="btn-ghost">關於一森</a>
+    </div>
   </div>
 </section>
 
+<!-- ============ 三條路徑 ============ -->
 <section class="section">
   <div class="container">
     <div class="section-head">
@@ -87,6 +143,7 @@
   </div>
 </section>
 
+<!-- ============ 一森介紹 ============ -->
 <section class="section section-soft">
   <div class="container">
     <div class="feature">
@@ -129,7 +186,8 @@
   </div>
 </section>
 
-<section class="journal-bg" style="padding:90px 24px">
+<!-- ============ 近期札記 ============ -->
+<section class="journal-bg" style="padding:100px 24px">
   <div style="max-width:780px;margin:0 auto">
     <div class="section-head" style="margin-bottom:48px">
       <span class="section-eyebrow">NOTEBOOK</span>
@@ -187,12 +245,13 @@
   </div>
 </section>
 
+<!-- ============ 結語 ============ -->
 <section class="section">
   <div class="container" style="max-width:780px;text-align:center">
     <span class="section-eyebrow">EPILOGUE</span>
-    <h2 style="font-size:30px;letter-spacing:.2em;margin:18px 0">寫在最後</h2>
+    <h2 style="font-size:30px;letter-spacing:.2em;margin:18px 0;font-weight:400">寫在最後</h2>
     <div class="divider"></div>
-    <p style="color:var(--ink-soft);font-size:16px;line-height:2;letter-spacing:.05em;margin-top:24px">
+    <p style="color:var(--ink-soft);font-size:16px;line-height:2.05;letter-spacing:.05em;margin-top:24px">
       這個網站沒有預約系統,沒有收費表,也沒有「立即諮詢」的按鈕。<br/>
       它只是一本被分享出來的札記。<br/>
       如果有什麼想聊的,寫信來就好——<br/>
