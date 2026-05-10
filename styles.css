@@ -454,8 +454,9 @@ img{max-width:100%;display:block}
 
 /* 一森人物區的照片版 feature-image */
 .feature-photo{
-  height:520px;border-radius:6px;
-  background-size:cover;background-position:center;
+  height:520px;min-height:520px;border-radius:6px;
+  background-color:#efe7d4;
+  background-size:cover;background-position:center;background-repeat:no-repeat;
   position:relative;overflow:hidden;
   box-shadow:0 10px 40px rgba(138,111,44,.12);
 }
@@ -479,7 +480,7 @@ img{max-width:100%;display:block}
   background:#fff;text-align:left;
   border:1px solid var(--line);border-radius:6px;
   transition:all .4s ease;position:relative;overflow:hidden;
-  display:block;
+  display:flex;flex-direction:column;
 }
 .service-card-photo::before{
   content:"";position:absolute;top:0;left:0;right:0;height:2px;z-index:3;
@@ -489,9 +490,10 @@ img{max-width:100%;display:block}
 .service-card-photo:hover{transform:translateY(-8px);box-shadow:var(--shadow);border-color:var(--gold-light)}
 .service-card-photo:hover::before{transform:scaleX(1)}
 .service-photo-cover{
-  height:200px;
-  background-size:cover;background-position:center;
-  position:relative;
+  height:200px;min-height:200px;
+  background-color:#efe7d4;
+  background-size:cover;background-position:center;background-repeat:no-repeat;
+  position:relative;flex-shrink:0;
   border-bottom:1px solid var(--line-soft);
 }
 .service-photo-cover::after{
@@ -505,7 +507,9 @@ img{max-width:100%;display:block}
 }
 .service-card-photo .service-body{
   padding:48px 28px 32px;text-align:center;
+  flex:1;display:flex;flex-direction:column;
 }
+.service-card-photo .service-body p{flex:1}
 .service-card-photo h3{font-size:23px;letter-spacing:.22em;margin-bottom:14px;font-weight:500}
 .service-card-photo p{color:var(--ink-soft);font-size:15px;line-height:1.95;margin-bottom:14px}
 .service-card-photo .more{
