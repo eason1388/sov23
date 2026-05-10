@@ -7,7 +7,7 @@
 <meta name="description" content="隨緣堂——一森的命理生活札記。八字、紫微斗數、風水的二十年隨筆。" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&family=Cormorant+Garamond:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;600&family=Noto+Sans+TC:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -39,9 +39,11 @@
   <a href="contact.html">聯絡我們</a>
 </div>
 
-<!-- ============ HERO (大氣升級版) ============ -->
+<!-- ============ HERO ============ -->
 <section class="hero">
-  <!-- 背景星象 SVG 裝飾 -->
+  <!-- 雲霧山水底層照片 -->
+  <div class="hero-bg-photo" style="background-image:url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=1800&q=80&auto=format&fit=crop');"></div>
+
   <div class="hero-stars" aria-hidden="true">
     <svg viewBox="0 0 1200 800" preserveAspectRatio="xMidYMid slice" xmlns="http://www.w3.org/2000/svg">
       <defs>
@@ -54,12 +56,9 @@
           <stop offset="100%" stop-color="#a99cc4" stop-opacity="0"/>
         </radialGradient>
       </defs>
-      <!-- 大型星雲光暈 -->
       <circle cx="180" cy="200" r="120" fill="url(#lavGlow)" opacity=".55"/>
       <circle cx="1020" cy="620" r="140" fill="url(#starGlow)" opacity=".35"/>
       <circle cx="950" cy="160" r="80" fill="url(#lavGlow)" opacity=".45"/>
-
-      <!-- 點點繁星 (twinkle 動畫) -->
       <g fill="#8a6f2c">
         <circle class="twinkle" cx="120" cy="120" r="1.8"/>
         <circle class="twinkle" cx="280" cy="80"  r="1.2"/>
@@ -77,15 +76,11 @@
         <circle class="twinkle" cx="900" cy="700" r="1.4"/>
         <circle class="twinkle" cx="1100" cy="540" r="2"/>
       </g>
-
-      <!-- 細線連起來的星座意象 -->
       <g stroke="#c4a35a" stroke-width=".6" fill="none" opacity=".35">
         <path d="M 120 120 L 280 80 L 450 160 L 640 90"/>
         <path d="M 820 220 L 1080 100 L 1140 320"/>
         <path d="M 60 540 L 240 660 L 380 720"/>
       </g>
-
-      <!-- 一彎月牙 -->
       <g transform="translate(1050,420)">
         <circle r="38" fill="#faf5e9" opacity=".55"/>
         <circle r="38" cx="14" fill="#fdfbf6" opacity="1"/>
@@ -108,7 +103,7 @@
   </div>
 </section>
 
-<!-- ============ 三條路徑 ============ -->
+<!-- ============ 三條路徑 (含照片) ============ -->
 <section class="section">
   <div class="container">
     <div class="section-head">
@@ -119,36 +114,48 @@
     </div>
 
     <div class="service-grid">
-      <a href="articles.html#bazi" class="service-card">
-        <div class="service-icon">八</div>
-        <h3>八字</h3>
-        <p>從天干地支到五行流轉,八字是把人生濃縮成八個字的古老智慧。</p>
-        <div class="more">十篇札記 →</div>
+      <a href="articles.html#bazi" class="service-card-photo">
+        <div class="service-photo-cover" style="background-image:url('https://images.unsplash.com/photo-1532153975070-2e9ab71f1b14?w=800&q=80&auto=format&fit=crop');">
+          <div class="service-icon">八</div>
+        </div>
+        <div class="service-body">
+          <h3>八字</h3>
+          <p>從天干地支到五行流轉,八字是把人生濃縮成八個字的古老智慧。</p>
+          <div class="more">十篇札記 →</div>
+        </div>
       </a>
 
-      <a href="articles.html#ziwei" class="service-card">
-        <div class="service-icon">紫</div>
-        <h3>紫微斗數</h3>
-        <p>一百零八顆星辰落入十二宮位,把命運描繪得像一張星圖。</p>
-        <div class="more">十篇札記 →</div>
+      <a href="articles.html#ziwei" class="service-card-photo">
+        <div class="service-photo-cover" style="background-image:url('https://images.unsplash.com/photo-1419242902214-272b3f66ee7a?w=800&q=80&auto=format&fit=crop');">
+          <div class="service-icon">紫</div>
+        </div>
+        <div class="service-body">
+          <h3>紫微斗數</h3>
+          <p>一百零八顆星辰落入十二宮位,把命運描繪得像一張星圖。</p>
+          <div class="more">十篇札記 →</div>
+        </div>
       </a>
 
-      <a href="articles.html#fengshui" class="service-card">
-        <div class="service-icon">水</div>
-        <h3>風水</h3>
-        <p>看似談空間,實則談人與環境的能量對話,以及怎麼住得舒坦。</p>
-        <div class="more">十篇札記 →</div>
+      <a href="articles.html#fengshui" class="service-card-photo">
+        <div class="service-photo-cover" style="background-image:url('https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80&auto=format&fit=crop');">
+          <div class="service-icon">水</div>
+        </div>
+        <div class="service-body">
+          <h3>風水</h3>
+          <p>看似談空間,實則談人與環境的能量對話,以及怎麼住得舒坦。</p>
+          <div class="more">十篇札記 →</div>
+        </div>
       </a>
     </div>
   </div>
 </section>
 
-<!-- ============ 一森介紹 ============ -->
+<!-- ============ 一森介紹 (含照片) ============ -->
 <section class="section section-soft">
   <div class="container">
     <div class="feature">
-      <div class="feature-image">
-        <div class="seal">緣</div>
+      <div class="feature-photo" style="background-image:url('https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=900&q=80&auto=format&fit=crop');">
+        <div class="seal-overlay">緣</div>
       </div>
       <div>
         <span class="section-eyebrow">ABOUT</span>
@@ -245,7 +252,6 @@
   </div>
 </section>
 
-<!-- ============ 結語 ============ -->
 <section class="section">
   <div class="container" style="max-width:780px;text-align:center">
     <span class="section-eyebrow">EPILOGUE</span>
