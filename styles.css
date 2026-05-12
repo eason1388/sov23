@@ -564,3 +564,20 @@ img{max-width:100%;display:block}
   .atmosphere-banner h1{font-size:30px;letter-spacing:.22em}
   .article-banner{height:180px}
 }
+
+
+/* 照片版印章 (取代 .stamp 的「緣」字) */
+.journal-intro .stamp-photo{
+  display:inline-block;width:130px;height:170px;
+  background-size:cover;background-position:center;
+  background-color:var(--bg-warm);
+  border:1px solid var(--gold);border-radius:2px;
+  margin-bottom:28px;transform:rotate(-3deg);
+  box-shadow:0 8px 28px rgba(138,111,44,.18), inset 0 0 0 4px rgba(255,255,255,.4);
+  position:relative;
+}
+.journal-intro .stamp-photo::after{
+  content:"";position:absolute;inset:6px;
+  border:1px dashed rgba(255,255,255,.55);
+  pointer-events:none;
+}
