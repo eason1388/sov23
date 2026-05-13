@@ -581,3 +581,49 @@ img{max-width:100%;display:block}
   border:1px dashed rgba(255,255,255,.55);
   pointer-events:none;
 }
+
+
+/* === v4 手機字級加大 === */
+@media (max-width:720px){
+  body{font-size:17px;line-height:1.85}
+  .hero h1{font-size:30px}
+  .hero-tagline{font-size:16.5px;line-height:1.95}
+  .section-head h2{font-size:24px}
+  .section-head .lead{font-size:16px}
+  .lead{font-size:16px}
+  .feature h2{font-size:24px}
+  .feature .lead{font-size:16px}
+  .feature-list strong{font-size:16px}
+  .feature-list p{font-size:14.5px;line-height:1.85}
+  .service-card-photo h3{font-size:20px}
+  .service-card-photo p{font-size:14.5px;line-height:1.85}
+  .article-body{font-size:17px;line-height:1.95}
+  .article-body h2{font-size:20px}
+  .article-body h3{font-size:17px}
+  .article-body p{margin-bottom:18px}
+  .entry-title{font-size:21px;line-height:1.6}
+  .entry-excerpt{font-size:15.5px;line-height:1.95}
+  .entry-meta{font-size:13px;gap:14px}
+  .entry-date{font-size:14px}
+  .entry-num{font-size:12px}
+  .entry-cat{font-size:11.5px}
+  .article-head h1{font-size:22px;line-height:1.55}
+  .article-head .cat-tag{font-size:11.5px}
+  .article-head .meta{font-size:12.5px}
+  .credentials .credential-num{font-size:34px}
+  .credentials .credential-label{font-size:13px}
+  .about-content p{font-size:16px;line-height:1.95}
+  .footer{font-size:13.5px;padding:54px 24px 24px}
+  .footer li{font-size:13px}
+  .footer-desc{font-size:13.5px;line-height:1.85}
+  .breadcrumb{font-size:13px}
+  .nav-links a{font-size:14px}
+  .mobile-drawer a{font-size:19px}
+}
+@media (max-width:420px){
+  body{font-size:17px}
+  .hero h1{font-size:26px;letter-spacing:.15em}
+  .article-body{font-size:16.5px}
+  .entry-title{font-size:19px}
+  .journal-intro h1{font-size:24px;letter-spacing:.18em}
+}
