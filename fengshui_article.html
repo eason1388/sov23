@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>風水文苑 — 隨緣堂</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@300;400;500;700&family=Noto+Sans+TC:wght@300;400&family=Ma+Shan+Zheng&display=swap" rel="stylesheet">
+<style>
+:root {
+--rice: #F5F0E8; --ink: #1C1C1A; --moss: #3D5A47; --moss-light: #5A7A64;
+--gold: #B8962E; --gold-light: #D4AF55; --stone: #7A7570; --fog: #E8E2D8;
+--vermillion: #C0392B; --paper: #EDE8DC;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+body { background:var(--rice); color:var(--ink); font-family:'Noto Serif TC',serif; font-weight:300; }
+
+nav {
+position:fixed; top:0; left:0; right:0; z-index:100;
+padding:0 5%; display:flex; align-items:center; justify-content:space-between;
+height:70px; background:rgba(245,240,232,0.95); backdrop-filter:blur(12px);
+border-bottom:1px solid rgba(184,150,46,0.2);
+}
+.nav-logo { display:flex; align-items:center; gap:12px; text-decoration:none; }
+.logo-text { font-family:'Ma Shan Zheng',cursive; font-size:1.6rem; color:var(--ink); }
+.nav-links { display:flex; gap:32px; list-style:none; }
+.nav-links a { text-decoration:none; color:var(--stone); font-size:0.85rem; letter-spacing:0.12em; font-family:'Noto Sans TC',sans-serif; font-weight:300; transition:color 0.3s; }
+.nav-links a:hover { color:var(--moss); }
+.nav-cta { background:var(--moss) !important; color:var(--rice) !important; padding:8px 20px; border-radius:2px; }
+
+.page-header {
+padding:140px 10% 80px;
+background:linear-gradient(135deg, var(--paper) 0%, var(--fog) 100%);
+position:relative; overflow:hidden;
+}
+.page-header::before {
+content:'風';
+position:absolute; right:8%; top:50%; transform:translateY(-50%);
+font-family:'Ma Shan Zheng',cursive; font-size:22vw; color:rgba(28,28,26,0.04);
+pointer-events:none; line-height:1;
+}
+.page-tag { font-family:'Noto Sans TC',sans-serif; font-size:0.7rem; letter-spacing:0.35em; color:var(--gold); margin-bottom:16px; display:block; }
+.page-title { font-family:'Ma Shan Zheng',cursive; font-size:clamp(2.5rem,5vw,4rem); color:var(--ink); margin-bottom:20px; }
+.page-desc { font-size:0.95rem; line-height:2; color:var(--stone); max-width:500px; }
+
+.filter-bar {
+padding:36px 10%;
+display:flex; gap:12px; flex-wrap:wrap;
+border-bottom:1px solid var(--fog);
+}
+.filter-btn {
+font-family:'Noto Sans TC',sans-serif; font-size:0.78rem; letter-spacing:0.15em;
+padding:8px 20px; border:1px solid var(--fog); background:transparent;
+color:var(--stone); cursor:pointer; transition:all 0.3s;
+}
+.filter-btn.active { background:var(--moss); color:var(--rice); border-color:var(--moss); }
+.filter-btn:hover:not(.active) { border-color:var(--moss); color:var(--moss); }
+
+.articles-main {
+padding:60px 10%;
+display:grid;
+grid-template-columns:1fr 320px;
+gap:60px;
+}
+
+.article-list { display:flex; flex-direction:column; gap:2px; }
+
+.article-item {
+background:var(--paper); padding:44px 48px;
+display:grid; grid-template-columns:1fr auto;
+gap:24px; align-items:start;
+text-decoration:none; color:inherit;
+transition:background 0.3s;
+position:relative;
+}
+.article-item::before {
+content:''; position:absolute; left:0; top:0; bottom:0;
+width:3px; background:linear-gradient(to bottom,var(--gold),var(--moss));
+transform:scaleY(0); transition:transform 0.4s; transform-origin:top;
+}
+.article-item:hover { background:var(--fog); }
+.article-item:hover::before { transform:scaleY(1); }
+
+.item-cat {
+display:inline-block; font-family:'Noto Sans TC',sans-serif;
+font-size:0.68rem; letter-spacing:0.25em; padding:4px 10px;
+border:1px solid currentColor; margin-bottom:14px;
+}
+.cat-yangzhai { color:var(--moss); }
+.cat-fate { color:var(--vermillion); }
+.cat-theory { color:var(--gold); }
+
+.item-title {
+font-family:'Noto Serif TC',serif; font-size:1.2rem; font-weight:500;
+color:var(--ink); line-height:1.6; margin-bottom:12px;
+}
+.item-excerpt { font-size:0.88rem; line-height:1.9; color:var(--stone); margin-bottom:16px; }
+.item-meta { font-family:'Noto Sans TC',sans-serif; font-size:0.72rem; color:var(--stone); letter-spacing:0.1em; opacity:0.7; }
+
+.item-number {
+font-family:'Ma Shan Zheng',cursive; font-size:3.5rem; color:rgba(184,150,46,0.15);
+line-height:1; padding-top:4px; min-width:60px; text-align:right;
+}
+
+.sidebar { position:sticky; top:90px; align-self:start; }
+.sidebar-card { background:var(--paper); padding:32px 28px; margin-bottom:2px; }
+.sidebar-title { font-family:'Noto Sans TC',sans-serif; font-size:0.7rem; letter-spacing:0.3em; color:var(--gold); margin-bottom:20px; }
+.sidebar-quote { font-family:'Ma Shan Zheng',cursive; font-size:1.1rem; color:var(--ink); line-height:1.9; margin-bottom:12px; }
+.sidebar-src { font-family:'Noto Sans TC',sans-serif; font-size:0.72rem; color:var(--stone); }
+
+.tag-cloud { display:flex; flex-wrap:wrap; gap:8px; }
+.tag {
+font-family:'Noto Sans TC',sans-serif; font-size:0.72rem; letter-spacing:0.1em;
+padding:6px 12px; border:1px solid var(--fog); color:var(--stone);
+cursor:pointer; transition:all 0.3s; text-decoration:none;
+}
+.tag:hover { border-color:var(--moss); color:var(--moss); }
+
+.service-list { display:flex; flex-direction:column; gap:10px; }
+.service-link {
+display:flex; justify-content:space-between; align-items:center;
+text-decoration:none; padding:10px 0;
+border-bottom:1px solid var(--fog);
+color:var(--ink); font-size:0.85rem; transition:color 0.3s;
+}
+.service-link:hover { color:var(--moss); }
+.service-arrow { color:var(--gold); font-size:0.8rem; }
+
+.full-article { padding:80px 10%; border-top:2px solid var(--fog); }
+.full-article:nth-child(odd) { background:var(--paper); }
+
+.article-header { margin-bottom:48px; }
+.article-heading {
+font-family:'Ma Shan Zheng',cursive; font-size:clamp(1.8rem,3vw,2.6rem);
+color:var(--ink); line-height:1.4; margin-bottom:16px; margin-top:16px;
+}
+.article-meta-full {
+font-family:'Noto Sans TC',sans-serif; font-size:0.78rem; letter-spacing:0.15em;
+color:var(--stone); opacity:0.7;
+}
+
+.article-body { max-width:680px; }
+.article-body p { font-size:1rem; line-height:2.2; color:var(--stone); margin-bottom:24px; }
+.article-body h3 {
+font-family:'Ma Shan Zheng',cursive; font-size:1.5rem; color:var(--ink);
+margin:36px 0 16px; padding-left:16px; border-left:3px solid var(--gold);
+}
+.article-body h4 {
+font-family:'Noto Serif TC',serif; font-size:1rem; font-weight:500;
+color:var(--moss); margin:24px 0 12px; letter-spacing:0.05em;
+}
+.article-body blockquote {
+border-left:3px solid var(--gold); padding:16px 24px;
+margin:32px 0; background:var(--fog); font-style:italic;
+}
+.article-body blockquote p { margin:0; font-size:0.95rem; color:var(--ink); }
+
+.highlight-box { background:var(--moss); color:var(--rice); padding:28px 32px; margin:36px 0; }
+.highlight-box p { color:rgba(245,240,232,0.85); line-height:2; margin:0; }
+.highlight-box strong { color:var(--rice); }
+
+footer {
+background:var(--ink); padding:40px 10%;
+display:flex; justify-content:space-between; align-items:center;
+flex-wrap:wrap; gap:16px;
+}
+.footer-logo { font-family:'Ma Shan Zheng',cursive; font-size:1.6rem; color:var(--rice); }
+.footer-text { font-family:'Noto Sans TC',sans-serif; font-size:0.72rem; color:rgba(245,240,232,0.4); }
+.footer-blessing { font-family:'Ma Shan Zheng',cursive; font-size:1rem; color:var(--gold); }
+
+.fade-up { opacity:0; transform:translateY(24px); transition:opacity 0.6s,transform 0.6s; }
+.fade-up.visible { opacity:1; transform:translateY(0); }
+
+@media(max-width:1024px){
+.articles-main { grid-template-columns:1fr; }
+.sidebar { position:static; }
+}
+@media(max-width:768px){
+.nav-links { display:none; }
+.article-item { grid-template-columns:1fr; }
+.item-number { display:none; }
+.full-article { padding:60px 6%; }
+}
+</style>
+</head>
+<body>
+
+<nav>
+<a href="index.html" class="nav-logo">
+  <span class="logo-text">隨緣堂</span>
+</a>
+<ul class="nav-links">
+  <li><a href="index.html#channels">三大頻道</a></li>
+  <li><a href="articles.html">修行文苑</a></li>
+  <li><a href="fengshui.html">風水文苑</a></li>
+  <li><a href="symbols.html">符咒百科</a></li>
+  <li><a href="index.html#consultation" class="nav-cta">預約諮詢</a></li>
+</ul>
+</nav>
+
+<header class="page-header">
+  <span class="page-tag">風水文苑 · 堪輿真傳</span>
+  <h1 class="page-title">陽宅風水<br>深度專欄</h1>
+  <p class="page-desc">以正統堪輿學為根，融合現代空間科學，用真心話講述影響你命運的居家環境之道。</p>
+</header>
+
+<div class="filter-bar">
+  <button class="filter-btn active" onclick="filterArticles('all', this)">全部文章</button>
+  <button class="filter-btn" onclick="filterArticles('yangzhai', this)">陽宅堪輿</button>
+  <button class="filter-btn" onclick="filterArticles('fate', this)">改運佈局</button>
+  <button class="filter-btn" onclick="filterArticles('theory', this)">玄學理論</button>
+</div>
+
+<div class="articles-main">
+<div class="article-list" id="articleList">
+
+  <a href="#qi-kou" class="article-item fade-up" data-cat="yangzhai" id="li-qi-kou">
+    <div>
+      <span class="item-cat cat-yangzhai">陽宅堪輿</span>
+      <h2 class="item-title">氣口決勝：你家大門的「呼吸」決定了財氣的去留</h2>
+      <p class="item-excerpt">大門是一個家的嘴巴，所有的氣流、能量乃至財氣，都從這裡進出。穿堂煞、大門雜物堆積、燈光昏暗——這三個最常見的氣口問題，正在悄悄影響你家的運勢，而解法其實非常簡單。</p>
+      <p class="item-meta">陽宅堪輿 · 大門佈局 · 閱讀約 7 分鐘</p>
+    </div>
+    <div class="item-number">一</div>
+  </a>
+
+  <a href="#bedroom" class="article-item fade-up" data-cat="yangzhai" id="li-bedroom">
+    <div>
+      <span class="item-cat cat-yangzhai">陽宅堪輿</span>
+      <h2 class="item-title">臥室風水：人生三分之一的時間決定了你另外三分之二的狀態</h2>
+      <p class="item-excerpt">床頭靠窗、腳衝門、鏡子正對床——這三個最普遍的臥室禁忌，從睡眠科學到氣場理論都有清晰的解釋。睡得好，氣場才能充電；氣場足，決策才能清明。</p>
+      <p class="item-meta">陽宅堪輿 · 臥室佈局 · 閱讀約 8 分鐘</p>
+    </div>
+    <div class="item-number">二</div>
+  </a>
+
+  <a href="#wealth" class="article-item fade-up" data-cat="fate" id="li-wealth">
+    <div>
+      <span class="item-cat cat-fate">改運佈局</span>
+      <h2 class="item-title">財位在哪裡？九成的人都放錯了位置</h2>
+      <p class="item-excerpt">三腳蟾蜍、招財貓、水晶球……買了一堆招財擺件卻財運依然不順？問題不在擺件本身，而在「位置」。風水講的是整體佈局聚氣，不是靠單一物品改運。本文教你找出家中真正的財位。</p>
+      <p class="item-meta">改運佈局 · 財位尋找 · 閱讀約 9 分鐘</p>
+    </div>
+    <div class="item-number">三</div>
+  </a>
+
+  <a href="#outside" class="article-item fade-up" data-cat="theory" id="li-outside">
+    <div>
+      <span class="item-cat cat-theory">玄學理論</span>
+      <h2 class="item-title">外巒頭：你家外面的環境，才是風水的天生命格</h2>
+      <p class="item-excerpt">路沖、壁刀、反弓水——這三種最常見的外部煞氣，長期影響住在其中的人卻渾然不知。外巒頭是天生的命格，室內擺件是後天的調整，本末倒置是最大的風水誤解。</p>
+      <p class="item-meta">玄學理論 · 外部環境 · 閱讀約 8 分鐘</p>
+    </div>
+    <div class="item-number">四</div>
+  </a>
+
+  <a href="#wuxing" class="article-item fade-up" data-cat="theory" id="li-wuxing">
+    <div>
+      <span class="item-cat cat-theory">玄學理論</span>
+      <h2 class="item-title">五行佈局：你缺什麼，家就補什麼，但「過補」才是大忌</h2>
+      <p class="item-excerpt">五行是風水與命理的共同語言。金、木、水、火、土各有對應的顏色、材質與方位，可以透過居家佈置來補足。然而五行之道在乎「中和」，缺木補木是智慧，把家裡弄成全綠色卻是災難。</p>
+      <p class="item-meta">玄學理論 · 五行調和 · 閱讀約 7 分鐘</p>
+    </div>
+    <div class="item-number">五</div>
+  </a>
+
+  <a href="#kitchen-toilet" class="article-item fade-up" data-cat="fate" id="li-kitchen-toilet">
+    <div>
+      <span class="item-cat cat-fate">改運佈局</span>
+      <h2 class="item-title">廚廁風水：財庫與排泄口的博弈，99%的人都忽略的細節</h2>
+      <p class="item-excerpt">廚房是財庫，廁所是排泄。馬桶蓋要不要蓋、廁所門要不要關、灶台油污要不要清——這些看似生活小事，在堪輿學中都是影響家運的關鍵細節，而且每一個都有科學可以解釋。</p>
+      <p class="item-meta">改運佈局 · 廚廁禁忌 · 閱讀約 6 分鐘</p>
+    </div>
+    <div class="item-number">六</div>
+  </a>
+
+</div><!-- end article-list -->
+
+<aside class="sidebar">
+  <div class="sidebar-card">
+    <p class="sidebar-title">堪輿法語</p>
+    <p class="sidebar-quote">「風水改的是環境，環境改的是心情，心情改的才是命運。」</p>
+    <p class="sidebar-src">— 隨緣堂風水真傳</p>
+  </div>
+
+  <div class="sidebar-card">
+    <p class="sidebar-title">文章標籤</p>
+    <div class="tag-cloud">
+      <a href="#" class="tag">大門氣口</a>
+      <a href="#" class="tag">臥室佈局</a>
+      <a href="#" class="tag">財位</a>
+      <a href="#" class="tag">路沖</a>
+      <a href="#" class="tag">壁刀</a>
+      <a href="#" class="tag">穿堂煞</a>
+      <a href="#" class="tag">五行</a>
+      <a href="#" class="tag">巒頭</a>
+      <a href="#" class="tag">理氣</a>
+      <a href="#" class="tag">飛星盤</a>
+      <a href="#" class="tag">陰陽宅</a>
+      <a href="#" class="tag">旺財佈局</a>
+    </div>
+  </div>
+
+  <div class="sidebar-card">
+    <p class="sidebar-title">服務導引</p>
+    <div class="service-list">
+      <a href="index.html#consultation" class="service-link">
+        <span>陽宅風水鑑定</span><span class="service-arrow">→</span>
+      </a>
+      <a href="index.html#consultation" class="service-link">
+        <span>流年運勢分析</span><span class="service-arrow">→</span>
+      </a>
+      <a href="articles.html" class="service-link">
+        <span>修行文苑</span><span class="service-arrow">→</span>
+      </a>
+      <a href="index.html#consultation" class="service-link">
+        <span>線上初診</span><span class="service-arrow">→</span>
+      </a>
+    </div>
+  </div>
+</aside>
+</div>
+
+
+<!-- ════════════════════════════════════════
+     FULL ARTICLES
+════════════════════════════════════════ -->
+
+<article class="full-article" id="qi-kou">
+<div class="article-header">
+  <span class="item-cat cat-yangzhai" style="display:inline-block;font-family:'Noto Sans TC',sans-serif;font-size:0.68rem;letter-spacing:0.25em;padding:4px 10px;border:1px solid #3D5A47;color:#3D5A47;margin-bottom:0;">陽宅堪輿</span>
+  <h2 class="article-heading">氣口決勝：你家大門的「呼吸」決定了財氣的去留</h2>
+  <p class="article-meta-full">大門佈局 · 閱讀約 7 分鐘</p>
+</div>
+<div class="article-body">
+
+<p>學風水，第一件事就是看「氣口」。什麼叫氣口？說穿了，就是你家的大門。</p>
+
+<p>大門是一個家的嘴巴，所有的氣流、能量、甚至是財氣，都從大門進來。所以大門的方向、大小、環境是否整潔，都非常重要。我去幫人看陽宅，第一件事一定是站在門口，靜靜地感受一下這個氣口的狀態。</p>
+
+<h3>穿堂煞：財氣的最大外漏點</h3>
+
+<p>你站在門口往裡面看，如果一眼就看到對面的窗戶，那氣就穿堂而過，留不住。這在風水上叫做「穿堂煞」。財氣一進門就直接從窗口跑掉，家裡的人很容易財來財去，賺了又花，存不了錢。</p>
+
+<p>我見過一個客戶，他做生意多年，收入不錯，但就是存不住錢，永遠感覺錢不夠用。我一進他家，大門正對著落地窗，風一吹，整個客廳都是穿堂的氣流。這就是問題所在。</p>
+
+<p>解決方式很簡單，在門和窗之間加一個玄關隔板或屏風，讓進來的氣能夠「彎個彎」再往裡走。這不是玄學，這是讓氣流有緩衝，讓能量在空間裡留得住。</p>
+
+<blockquote>
+<p>「氣宜藏而不宜散，水宜聚而不宜流。」這是堪輿學最核心的法則。財氣如水，有得聚才有得用，穿堂而過的氣，是聚不了財的。</p>
+</blockquote>
+
+<h3>大門口的三大禁忌</h3>
+
+<h4>一、堆積雜物</h4>
+<p>大門口堆了鞋子、雜物，甚至停了腳踏車機車的，比比皆是。你想想，這是你家的嘴巴，你把嘴巴堵住，好的東西怎麼進來？氣口要清爽、開闊，才能引納好的能量。</p>
+
+<h4>二、燈光昏暗</h4>
+<p>大門附近燈光要夠亮。明亮的光線能夠引氣入室，昏暗的門口會讓整個家的氣場沉滯。如果你家門口的燈壞了很久沒換，這是第一件應該處理的事。</p>
+
+<h4>三、鞋子亂放</h4>
+<p>鞋子代表「腳踏實地」，但亂放的鞋子帶來的是凌亂的地氣。最好有一個鞋櫃，把鞋子收納整齊，鞋尖朝內放，代表財氣入屋，不要往外。</p>
+
+<div class="highlight-box">
+<p><strong>隨緣堂叮嚀：</strong>大門口整理乾淨、燈光明亮、加設玄關——這三件事今天就能做，不需要花什麼大錢。很多人花大錢買招財擺件，卻連大門口的基本氣口都沒有顧好，本末倒置了。先把氣口顧好，再談其他佈局。</p>
+</div>
+
+</div>
+</article>
+
+
+<article class="full-article" id="bedroom">
+<div class="article-header">
+  <span class="item-cat cat-yangzhai" style="display:inline-block;font-family:'Noto Sans TC',sans-serif;font-size:0.68rem;letter-spacing:0.25em;padding:4px 10px;border:1px solid #3D5A47;color:#3D5A47;margin-bottom:0;">陽宅堪輿</span>
+  <h2 class="article-heading">臥室風水：人生三分之一的時間決定了你另外三分之二的狀態</h2>
+  <p class="article-meta-full">臥室佈局 · 閱讀約 8 分鐘</p>
+</div>
+<div class="article-body">
+
+<p>如果你問我，家裡哪個地方的風水最重要？我的答案永遠是：臥室。</p>
+
+<p>你人生有三分之一的時間在床上。這三分之一的時間，你的身體在休息，但你的氣場、你的磁場，是在跟這個空間的環境持續互動的。環境好，你醒來精神飽滿，決策清醒；環境不好，你睡了八個小時還是很累，情緒煩躁，做什麼事都提不起勁。</p>
+
+<h3>床頭的選位：靠山才有依靠</h3>
+
+<p>床頭一定要靠實牆，這是最重要的原則。實牆給你「靠山」——在你最脆弱、最放鬆的睡眠狀態，身後有穩固的支撐，這是一種深層的潛意識安全感，你的身體才能真正放鬆、深入修復。</p>
+
+<p>床頭不能靠窗。很多現代人喜歡把床靠著窗戶，覺得採光好、視野佳，但窗戶是氣流進出最頻繁的地方，氣流不穩定，睡眠就容易動盪，夢多、睡不沉、早晨醒來沒精神，長期下來對健康和運勢都有影響。</p>
+
+<h3>腳衝門：最常見的臥室禁忌</h3>
+
+<p>躺在床上，腳正對著房間門，這叫「腳衝門」。在傳統觀念裡，只有往生之人才是這個姿勢，所以這個格局歷來被認為不吉。更實際的解釋是：房間門是氣流進出最頻繁的地方，你躺著直衝門口，夜間的氣流直接打在你的腳上，睡眠品質當然不好，久了對下半身的健康也有影響。</p>
+
+<blockquote>
+<p>「臥室是養氣之所，非消耗之地。床的位置安對了，整夜都在補氣；床的位置錯了，整夜都在洩氣。」</p>
+</blockquote>
+
+<h3>鏡子的禁忌：夜間的驚嚇源</h3>
+
+<p>臥室裡不要有正對著床的鏡子。這不是迷信，是心理學。你的潛意識在睡眠狀態中對外界刺激非常敏感，夜間起床，視線落在鏡子裡，半夢半醒間看到自己或看到反射的光影，容易引起驚嚇反應，影響後續的睡眠品質。</p>
+
+<h3>臥室不宜放大型植物</h3>
+
+<p>這個很多人沒想到。植物在白天行光合作用吸收二氧化碳，但夜晚反過來，吸氧氣、放二氧化碳。臥室空間本來就相對密閉，如果有大型的闊葉植物，夜間的二氧化碳濃度就會偏高，你睡得不好，你以為是風水問題，其實根本原因是空氣品質。</p>
+
+<div class="highlight-box">
+<p><strong>隨緣堂叮嚀：</strong>床頭靠實牆、不要腳衝門、鏡子不對床——這三個原則做到了，臥室的基本氣場就安定了。若家中格局限制了床位，可以用床頭板加高、在門口加設屏風等方式來調整氣流。有特殊困難的格局，歡迎預約本堂諮詢服務，給你個人化的解決方案。</p>
+</div>
+
+</div>
+</article>
+
+
+<article class="full-article" id="wealth">
+<div class="article-header">
+  <span class="item-cat cat-fate" style="display:inline-block;font-family:'Noto Sans TC',sans-serif;font-size:0.68rem;letter-spacing:0.25em;padding:4px 10px;border:1px solid #C0392B;color:#C0392B;margin-bottom:0;">改運佈局</span>
+  <h2 class="article-heading">財位在哪裡？九成的人都放錯了位置</h2>
+  <p class="article-meta-full">財位尋找 · 閱讀約 9 分鐘</p>
+</div>
+<div class="article-body">
+
+<p>講到風水，大家最感興趣的永遠是「財位」。財位在哪裡？怎麼旺財？</p>
+
+<p>在回答這個問題之前，我要先說一件很重要的事：風水講的是「位置」，不是「物品」本身。你買了招財貓、三腳蟾蜍、黃水晶，但放的位置不對，放再多都沒用。</p>
+
+<h3>財位的兩種類型</h3>
+
+<h4>一、固定財位</h4>
+<p>站在大門口往裡面看，左手邊最遠的角落，就是你家的基本固定財位。這個位置要保持乾淨整齊，燈光明亮，最好放一盆圓葉的綠色植物（如圓葉黃金葛、翡翠木），代表財氣在此聚積、生長。</p>
+
+<h4>二、流年財位</h4>
+<p>每年根據九宮飛星的運轉，財位所在的方位會有所不同。這需要根據當年的元旦之氣來計算，不同年份的財位不同，這也是為什麼每年都要重新佈局的原因。</p>
+
+<h3>財位的三大禁忌</h3>
+
+<p>找到財位之後，更重要的是不要犯這三個禁忌：</p>
+
+<p>第一，財位堆雜物。財位是空曠的，財氣就聚不住；財位雜亂，賺的就是亂財，來了也留不住。</p>
+
+<p>第二，財位旁邊是廁所。廁所的穢氣會直接沖散財位的能量，財氣進來就被沖走了。若格局上財位剛好在廁所旁邊，廁所的門一定要關好，並且在廁所內放除濕劑和盆栽，減少穢氣外洩。</p>
+
+<p>第三，財位燈光昏暗。明亮的光線能聚氣，昏暗的角落是氣場的死角，財氣不會流向那裡。可以在財位加一盞小台燈，長期讓這個角落保持明亮。</p>
+
+<blockquote>
+<p>「風水不是靠一個擺件改運，而是靠整體佈局聚氣。擺件只是點綴，位置才是關鍵。」</p>
+</blockquote>
+
+<h3>一個真實案例</h3>
+
+<p>我有一個做生意的客戶，請我去看他的公司。他辦公室裡擺了不少招財的東西，但業績就是起不來。我一進去，馬上發現問題：他的財位角落，放了一個大型碎紙機和一個垃圾桶，而且那個角落的燈管壞了半年沒換，整個角落又暗又有穢氣。</p>
+
+<p>財位的狀態，完全對應了他的財運狀態——財氣一到就被「碎掉」、「扔掉」。後來我幫他把那個角落整理乾淨，換了燈管，放了一盆植物，兩個月後他的業績開始有明顯的起色。這不是魔法，這是環境影響心理，心理影響決策的連鎖反應。</p>
+
+<div class="highlight-box">
+<p><strong>隨緣堂叮嚀：</strong>今天就可以做的事：找出你家或辦公室的財位（大門入口左手邊最遠角落），清理雜物、換上明亮的燈光、放一盆圓葉植物。這三件事，比買任何招財擺件都更有效。</p>
+</div>
+
+</div>
+</article>
+
+
+<article class="full-article" id="outside">
+<div class="article-header">
+  <span class="item-cat cat-theory" style="display:inline-block;font-family:'Noto Sans TC',sans-serif;font-size:0.68rem;letter-spacing:0.25em;padding:4px 10px;border:1px solid #B8962E;color:#B8962E;margin-bottom:0;">玄學理論</span>
+  <h2 class="article-heading">外巒頭：你家外面的環境，才是風水的天生命格</h2>
+  <p class="article-meta-full">外部環境 · 閱讀約 8 分鐘</p>
+</div>
+<div class="article-body">
+
+<p>風水分兩大塊：一個是「巒頭」，一個是「理氣」。巒頭就是看環境的形狀，理氣就是用方位、飛星來計算吉凶。</p>
+
+<p>很多人只注重室內佈置，卻忽略了外面的環境，這是本末倒置的。我常說：外巒頭是你家「天生的命格」，室內佈置是「後天的調整」。如果外面的環境本來就很糟糕，你裡面擺什麼都補不回來。</p>
+
+<h3>路沖：氣流直衝的血光之煞</h3>
+
+<p>你家大門或主要窗戶，正對著一條直路衝過來，這叫路沖。氣流帶著速度直衝過來，沒有任何緩衝，那個力道是非常強的。住在這裡的人，容易有意外事故、血光之災，或者健康反覆出問題，運勢也容易起伏不定。</p>
+
+<p>化解路沖，最常見的方法是在大門外放一對石獅子或石敢當，作為「擋煞」的屏障。也可以在門口種植高大的喬木，讓樹木成為天然的緩衝帶。</p>
+
+<h3>壁刀：無形的刀鋒之煞</h3>
+
+<p>隔壁有一棟大樓，牆角的邊緣正對著你家，就像一把刀的刀鋒指向你，這叫壁刀。長期受壁刀沖射，住在裡面的人容易有手術、外傷，或者在工作上受到他人的「刀割」——意思是遭遇競爭對手的打壓、被人算計。</p>
+
+<p>壁刀的化解，可以在受沖的窗口掛山海鎮或八卦鏡，讓煞氣反射回去。若是正門受沖，則以種植茂密的植物作為緩衝。</p>
+
+<h3>反弓水：財氣外散的地形之煞</h3>
+
+<p>你家門前有一條彎曲的馬路，彎曲的弧度是背對著你家的（就像弓背朝你），這就是反弓水。你是在弧的外圈，氣流帶著能量從你身邊流走，聚不住財氣。</p>
+
+<blockquote>
+<p>「買房子之前，先站在門口看三分鐘。這三分鐘，比任何風水顧問費都值錢。」</p>
+</blockquote>
+
+<h3>選房子的時候就要把好關</h3>
+
+<p>外巒頭的問題，最根本的解法是選房子的時候就要避開這些格局。買房子或租房子之前，多花一點時間在門口看看四周：正前方有沒有直路衝過來？隔壁大樓的牆角有沒有指向我的窗戶？門前的馬路是弓面還是弓背？</p>
+
+<p>這些觀察，不需要任何風水知識，只需要你「有意識地看」。選對了外巒頭，這個家的基礎就穩了。</p>
+
+<div class="highlight-box">
+<p><strong>隨緣堂叮嚀：</strong>若你已經住在有外部煞氣的環境中，不必驚慌。煞氣是可以化解的，化解的重點在於「擋、隔、轉」三個字。若有特定的外巒頭問題，歡迎預約本堂諮詢，我們會根據實際狀況給出最適合的化煞建議。</p>
+</div>
+
+</div>
+</article>
+
+
+<article class="full-article" id="wuxing">
+<div class="article-header">
+  <span class="item-cat cat-theory" style="display:inline-block;font-family:'Noto Sans TC',sans-serif;font-size:0.68rem;letter-spacing:0.25em;padding:4px 10px;border:1px solid #B8962E;color:#B8962E;margin-bottom:0;">玄學理論</span>
+  <h2 class="article-heading">五行佈局：你缺什麼，家就補什麼，但「過補」才是大忌</h2>
+  <p class="article-meta-full">五行調和 · 閱讀約 7 分鐘</p>
+</div>
+<div class="article-body">
+
+<p>風水跟命理是相通的，都用「五行」來解釋世界。金、木、水、火、土，這五個元素相生相剋，構成了宇宙運作的基本規律。</p>
+
+<p>你的命格裡缺什麼五行，你的家就可以透過顏色、材質、形狀來補充那個五行的能量。這是五行佈局的核心思想，也是很多人開始接觸風水的入門概念。</p>
+
+<h3>五行與居家的對應</h3>
+
+<h4>木：綠色、植物、木製家具、長條形</h4>
+<p>缺木的人，家中可以多放綠色植物、木製家具，或是在東方位置加強木的元素。木代表生長、希望、向上的力量，是最容易在家居中佈置的五行元素。</p>
+
+<h4>火：紅色、燈光、尖銳造型</h4>
+<p>缺火的人，可以在南方位置加強燈光，或是用適量的暖紅色系佈置。火代表活力、熱情、向外擴展的能量，適合事業需要衝勁的人補充。</p>
+
+<h4>土：黃色、陶瓷、方形、大地系色調</h4>
+<p>缺土的人，可以用米黃色、大地色的家居用品，或在中央位置放置陶製器物。土代表穩定、根基、積蓄，是需要增強財富穩定性的人首選。</p>
+
+<h4>金：白色、金屬材質、圓形</h4>
+<p>缺金的人，可以在西方或西北方加入金屬元素，白色或金色的佈置。金代表收斂、精煉、執行力，適合需要增強決斷力的人。</p>
+
+<h4>水：黑色、藍色、魚缸、流水造型</h4>
+<p>缺水的人，可以放魚缸或桌上型流水器，或用深藍色、黑色的佈置元素。水代表智慧、流動、財富的流通，也是最常見的招財五行元素。</p>
+
+<h3>過補的代價</h3>
+
+<p>然而，我要特別強調：五行之道在乎「中和」，不是某一個強到壓過所有其他的。</p>
+
+<blockquote>
+<p>「補五行，補的是不足；若是過補，反而傷身。風水之道，在乎中和，不在乎偏頗。」</p>
+</blockquote>
+
+<p>我見過有人聽說缺火，就把家裡弄得到處是紅色，客廳、臥室、廚房全紅，到處放蠟燭——結果家人容易情緒激動、脾氣暴躁，口舌是非也多了。這就是火過旺的後果。五行是系統，不是你喜歡哪個就補哪個，要考慮整體的平衡。</p>
+
+<div class="highlight-box">
+<p><strong>隨緣堂叮嚀：</strong>五行佈局最準確的方式，是先知道自己的生辰八字，了解命中欠缺的五行，再針對性地補充。若不清楚自己的五行結構，歡迎預約本堂的命理分析，讓我們幫你找出最適合的居家五行佈局方向。</p>
+</div>
+
+</div>
+</article>
+
+
+<article class="full-article" id="kitchen-toilet">
+<div class="article-header">
+  <span class="item-cat cat-fate" style="display:inline-block;font-family:'Noto Sans TC',sans-serif;font-size:0.68rem;letter-spacing:0.25em;padding:4px 10px;border:1px solid #C0392B;color:#C0392B;margin-bottom:0;">改運佈局</span>
+  <h2 class="article-heading">廚廁風水：財庫與排泄口的博弈，99%的人都忽略的細節</h2>
+  <p class="article-meta-full">廚廁禁忌 · 閱讀約 6 分鐘</p>
+</div>
+<div class="article-body">
+
+<p>廚房在風水裡代表「財庫」，廁所代表「排泄與洩氣」。這兩個地方如果格局不好、或沒有好好維護，對家運的影響是非常直接的。</p>
+
+<h3>廚房：灶台是財的根本</h3>
+
+<p>廚房的灶，在傳統風水裡代表你家的「飲食之源」，也就是財的根本。灶的方向、灶的清潔程度，都是風水師第一個會看的地方。</p>
+
+<p>灶口不能正對廁所門，不能正對大門——前者是讓財氣被穢氣汙染，後者是讓財氣從大門飛出去，都是損財的格局。現代公寓很多格局是固定的，沒辦法改灶的方向，這時候至少要確保廚房保持整潔，灶台上沒有油垢和雜物。</p>
+
+<p>灶台的油污，是風水禁忌中最被忽視的一條。油污代表「混濁的財氣」，意思是錢雖然有，但來路不乾淨，或者賺了錢總有額外的開銷把它消耗掉。定期清潔灶台，是最簡單、最有效的廚房風水。</p>
+
+<h3>廁所：洩氣的出口要管好</h3>
+
+<p>廁所的門，平時建議隨手關著。這不只是風水，也是現代衛生觀念。廁所的濕氣、穢氣若長期往外散，整個家的空氣品質就會下降，住在裡面的人容易生病、情緒低落、運勢沉滯。</p>
+
+<p>馬桶蓋要蓋著。這是老生常談，但做到的人出乎意料地少。馬桶是一個「洩」的出口，馬桶蓋開著，不只是穢氣外洩，風水上更代表財氣隨著水流而去。這是最容易做到、效果也很實際的一件事。</p>
+
+<blockquote>
+<p>「廚房是進財之所，廁所是洩氣之口。前者要旺，後者要封。兩者皆潔，家運自然清明。」</p>
+</blockquote>
+
+<h3>廚廁相鄰的格局</h3>
+
+<p>廚房和廁所相鄰，在風水上是「財庫緊鄰排洩口」，容易造成財氣被穢氣影響。若格局無法改變，最重要的是兩者的門不要正對，廁所門隨時保持關閉，廚房保持通風清潔。可以在廁所內放一小盆吸穢的植物（如虎尾蘭），降低穢氣的影響。</p>
+
+<div class="highlight-box">
+<p><strong>隨緣堂叮嚀：</strong>今天就做的廚廁風水三件事——清理灶台油污、廁所門隨手關、蓋上馬桶蓋。這三件事合起來，是最基礎、最有效的廚廁風水管理。不需要花錢，只需要養成習慣。</p>
+</div>
+
+</div>
+</article>
+
+
+<footer>
+  <span class="footer-logo">隨緣堂</span>
+  <span class="footer-text">© 隨緣堂 道家玄學道場 · 保留一切權利<br>風水服務為環境輔助，身體不適請先就醫</span>
+  <span class="footer-blessing">福生無量天尊</span>
+</footer>
+
+<script>
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((e,i) => {
+    if(e.isIntersecting) setTimeout(() => e.target.classList.add('visible'), i*100);
+  });
+}, { threshold:0.1 });
+document.querySelectorAll('.fade-up').forEach(el => observer.observe(el));
+
+function filterArticles(cat, btn) {
+  document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+  btn.classList.add('active');
+  document.querySelectorAll('.article-item').forEach(item => {
+    if(cat === 'all' || item.dataset.cat === cat) {
+      item.style.display = 'grid';
+    } else {
+      item.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>
